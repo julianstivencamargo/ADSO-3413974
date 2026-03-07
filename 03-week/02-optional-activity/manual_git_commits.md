@@ -1,50 +1,99 @@
-# Manual para realizar commits desde la terminal con Git
+# Manual Profesional para Realizar Commits desde la Terminal con Git
 
 ## 1. Introducción
 
-**Git** es un sistema de control de versiones que permite gestionar los
-cambios realizados en archivos de un proyecto a lo largo del tiempo. Es
-ampliamente utilizado en el desarrollo de software para llevar un
-historial de modificaciones, colaborar con otras personas y recuperar
-versiones anteriores del proyecto cuando sea necesario.
+En el desarrollo de software y en la gestión de proyectos digitales, es
+fundamental llevar un control organizado de los cambios que se realizan
+en los archivos. Para esto existe **Git**, un sistema de control de
+versiones ampliamente utilizado en todo el mundo.
 
-Un **commit** es una confirmación de cambios en el repositorio. Cada
-commit guarda una "foto" del estado actual del proyecto junto con un
-mensaje que describe los cambios realizados.
+**Git** permite registrar cada cambio que se hace en un proyecto, de
+modo que se pueda: - Revisar qué modificaciones se hicieron. - Volver a
+versiones anteriores si ocurre algún error. - Trabajar en equipo sin
+perder el control del proyecto.
 
-El uso de control de versiones es importante porque permite:
+Un **commit** es un registro que guarda los cambios realizados en los
+archivos del proyecto en un momento específico. Es como tomar una
+**fotografía del estado actual del proyecto** junto con un mensaje que
+explica qué cambios se hicieron.
 
--   Mantener un historial de cambios del proyecto.
--   Trabajar de manera colaborativa con otras personas.
--   Recuperar versiones anteriores si ocurre algún error.
--   Organizar y documentar el desarrollo del proyecto.
+Cada commit crea un punto en el historial del proyecto, lo que permite
+rastrear el progreso del desarrollo y entender cómo ha evolucionado el
+código con el tiempo.
+
+El uso de commits organizados es una práctica fundamental en proyectos
+profesionales porque:
+
+-   Permite mantener un historial claro de cambios.
+-   Facilita el trabajo colaborativo entre desarrolladores.
+-   Permite identificar errores rápidamente.
+-   Mejora la organización y documentación del proyecto.
+
+Este manual está diseñado para **personas que nunca han utilizado Git**,
+explicando paso a paso cómo realizar commits desde la terminal.
 
 ------------------------------------------------------------------------
 
-## 2. Requisitos previos
+## 2. Requisitos Previos
 
-Antes de realizar commits desde la terminal, es necesario contar con lo
-siguiente:
+Antes de comenzar a trabajar con Git desde la terminal, es necesario
+contar con algunos elementos básicos.
 
--   Tener **Git instalado** en el sistema.
--   Tener acceso a una **terminal o consola**.
--   Tener un **repositorio Git creado o clonado**.
+### Tener Git instalado
 
-Para verificar si Git está instalado, ejecuta:
+Primero debes tener Git instalado en tu computador.
+
+Para verificar si Git está instalado, abre la terminal y escribe:
 
 ``` bash
 git --version
 ```
 
-Si Git está instalado correctamente, se mostrará la versión instalada.
+Si Git está correctamente instalado, aparecerá algo similar a:
+
+    git version 2.x.x
 
 ------------------------------------------------------------------------
 
-## 3. Configuración inicial de Git
+### Tener acceso a una terminal o consola
 
-Antes de comenzar a trabajar con Git, es recomendable configurar el
-**nombre de usuario** y el **correo electrónico**, ya que esta
-información se asociará a cada commit.
+Git funciona principalmente desde la **terminal**, también conocida como
+**línea de comandos**.
+
+Dependiendo del sistema operativo, puedes usar:
+
+-   Windows: PowerShell o Git Bash
+-   Linux: Terminal
+-   Mac: Terminal
+
+------------------------------------------------------------------------
+
+### Tener un repositorio Git
+
+Un **repositorio** es la carpeta donde Git guarda el historial de
+cambios del proyecto.
+
+Existen dos formas comunes de obtener un repositorio:
+
+Crear uno nuevo:
+
+``` bash
+git init
+```
+
+Clonar uno existente:
+
+``` bash
+git clone URL_DEL_REPOSITORIO
+```
+
+------------------------------------------------------------------------
+
+## 3. Configuración Inicial de Git
+
+Antes de comenzar a realizar commits, es importante configurar tu
+identidad en Git. Esta información se registrará en cada commit que
+realices.
 
 ### Configurar nombre de usuario
 
@@ -55,34 +104,39 @@ git config --global user.name "Tu Nombre"
 ### Configurar correo electrónico
 
 ``` bash
-git config --global user.email "tuemail@ejemplo.com"
+git config --global user.email "correo@ejemplo.com"
 ```
 
-### Ver la configuración actual
+### Verificar configuración
 
 ``` bash
 git config --list
 ```
 
-La opción `--global` indica que la configuración se aplicará a todos los
-repositorios del usuario.
+La opción `--global` indica que esta configuración se aplicará a todos
+los repositorios del sistema.
 
 ------------------------------------------------------------------------
 
-## 4. Flujo básico para realizar un commit
+## 4. Flujo Básico para Realizar un Commit
 
-El proceso para crear un commit generalmente sigue tres pasos
-principales.
+El proceso para crear un commit en Git sigue tres pasos principales.
 
-### 1. Verificar el estado del repositorio
+### Paso 1: Verificar el estado del repositorio
 
 ``` bash
 git status
 ```
 
-Este comando permite ver qué archivos han sido modificados o añadidos.
+Este comando muestra:
 
-### 2. Agregar archivos al área de preparación (staging)
+-   Archivos modificados
+-   Archivos nuevos
+-   Archivos listos para commit
+
+------------------------------------------------------------------------
+
+### Paso 2: Agregar archivos al área de preparación (Staging)
 
 Agregar un archivo específico:
 
@@ -96,116 +150,113 @@ Agregar todos los archivos modificados:
 git add .
 ```
 
-### 3. Crear el commit con un mensaje
+------------------------------------------------------------------------
+
+### Paso 3: Crear el commit
 
 ``` bash
-git commit -m "Descripción breve de los cambios realizados"
+git commit -m "Mensaje que describa los cambios"
 ```
 
-El mensaje debe describir claramente qué cambios se realizaron.
+Ejemplo:
+
+``` bash
+git commit -m "Se corrige error en el formulario de registro"
+```
 
 ------------------------------------------------------------------------
 
-## 5. Ejemplo completo
+## 5. Ejemplo Completo
 
-A continuación se muestra un ejemplo práctico.
+Supongamos que editaste el archivo **index.html**.
 
-### Paso 1: Verificar el estado
+1.  Revisar cambios:
 
 ``` bash
 git status
 ```
 
-Salida posible:
-
-    modified: index.html
-
-### Paso 2: Agregar el archivo modificado
+2.  Agregar archivo:
 
 ``` bash
 git add index.html
 ```
 
-### Paso 3: Crear el commit
+3.  Crear commit:
 
 ``` bash
-git commit -m "Se actualiza el contenido del archivo index.html"
+git commit -m "Actualiza contenido de la página principal"
 ```
 
 Salida posible:
 
-    [main 1a2b3c4] Se actualiza el contenido del archivo index.html
-    1 file changed, 5 insertions(+), 2 deletions(-)
-
-Esto indica que el commit fue creado correctamente.
+    [main 8f72ab1] Actualiza contenido de la página principal
+    1 file changed, 4 insertions(+), 1 deletion(-)
 
 ------------------------------------------------------------------------
 
-## 6. Buenas prácticas para mensajes de commit
+## 6. Buenas Prácticas para Mensajes de Commit
 
-Un buen mensaje de commit debe ser claro, breve y descriptivo.
+Un buen mensaje de commit ayuda a entender rápidamente qué cambios se
+realizaron.
 
 ### Recomendaciones
 
--   Usar frases cortas y claras.
--   Explicar **qué cambio se hizo**.
--   Usar verbos en presente.
+-   Escribir mensajes claros y específicos.
+-   Usar frases cortas.
+-   Describir qué cambio se hizo.
+-   Evitar mensajes genéricos.
 
-### Ejemplos de buenos mensajes
+### Ejemplos de buenos commits
 
-    Agrega formulario de registro
+    Agrega validación al formulario
     Corrige error en cálculo de precios
-    Actualiza estilos de la página principal
+    Actualiza diseño de la página principal
     Elimina código duplicado
 
-### Ejemplos de malos mensajes
+### Ejemplos de malos commits
 
     Cambios
     Update
     Arreglo
 
-Los mensajes poco claros dificultan entender el historial del proyecto.
-
 ------------------------------------------------------------------------
 
-## 7. Comandos útiles adicionales
+## 7. Comandos Útiles Adicionales
 
-### Ver estado del repositorio
+Ver estado del repositorio:
 
 ``` bash
 git status
 ```
 
-### Ver historial de commits
+Ver historial de commits:
 
 ``` bash
 git log
 ```
 
-### Ver diferencias entre cambios
+Ver diferencias entre cambios:
 
 ``` bash
 git diff
 ```
 
-### Restaurar cambios en archivos
+Restaurar cambios en un archivo:
 
 ``` bash
 git restore archivo.txt
 ```
 
-Este comando descarta los cambios realizados en un archivo y lo restaura
-a su última versión guardada.
-
 ------------------------------------------------------------------------
 
 ## 8. Conclusión
 
-Realizar commits en Git es una práctica fundamental para el control de
-versiones en cualquier proyecto. Los commits permiten guardar cambios de
-manera organizada, mantener un historial claro del desarrollo y
+Aprender a utilizar Git desde la terminal es una habilidad fundamental
+en el desarrollo moderno de software. Los commits permiten guardar
+cambios de forma organizada, mantener un historial claro del proyecto y
 facilitar el trabajo colaborativo.
 
-Aprender a usar comandos como `git add`, `git commit` y `git status`
-desde la terminal brinda mayor control sobre el repositorio y ayuda a
-mantener un proyecto ordenado y bien documentado.
+Dominar comandos como `git status`, `git add` y `git commit` permite
+tener control total sobre la evolución de un proyecto y mejorar la
+gestión del código.
