@@ -1,0 +1,21 @@
+Problema
+
+Actualmente, cuando el instructor abre la lista de aprendices, debe recorrer uno por uno y marcar manualmente la asistencia de todos. Esto consume varios minutos, especialmente en grupos grandes.
+
+Objetivo
+
+Reducir el tiempo necesario para registrar la asistencia sin cambiar el funcionamiento general de Sofía Plus.
+
+solución
+Al iniciar el registro de asistencia, el sistema marcará automáticamente a todos los aprendices como "Presentes". El instructor únicamente modificará el estado de los aprendices ausentes o que llegaron tarde antes de guardar la asistencia.
+
+Requisitos 
+
+RF-01	El sistema deberá cargar automáticamente la lista de aprendices de la ficha seleccionada.
+RF-02	El sistema deberá asignar el estado Presente a todos los aprendices al iniciar el registro de asistencia.
+RF-03	El sistema deberá permitir cambiar el estado de un aprendiz a Ausente.
+RF-04	El sistema deberá permitir cambiar el estado de un aprendiz a Tarde.
+RF-05	El sistema deberá permitir modificar el estado de varios aprendices antes de guardar la asistencia.
+RF-06	El sistema deberá permitir guardar el registro de asistencia.
+RF-07	El sistema deberá mostrar un mensaje de confirmación cuando la asistencia sea registrada correctamente.
+RF-08	El sistema deberá permitir editar una asistencia antes de finalizar el registro, en caso de que el instructor detecte un error.
