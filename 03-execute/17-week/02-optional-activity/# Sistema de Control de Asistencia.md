@@ -206,3 +206,41 @@ Esto asegura que todas las acciones del instructor queden documentadas.
 - Se calculan el tiempo de retraso y las horas de formación perdidas.
 - El aprendiz puede presentar un motivo, y el instructor decide si la falla queda como justificada o no justificada.
 
+---
+
+# Requisitos Funcionales
+
+* RF-01. El instructor podrá abrir una sesión de toma de asistencia.
+* RF-02. El sistema activará el punto de acceso móvil y generará el código QR de conexión al abrir la sesión.
+* RF-03. El aprendiz registrará su asistencia al escanear el código QR y confirmar su nombre en la página de registro.
+* RF-04. El sistema comprobará que el dispositivo del aprendiz esté conectado al hotspot de la sesión activa antes de aceptar el registro.
+* RF-05. El sistema guardará automáticamente la fecha y hora de cada registro.
+* RF-06. El sistema no permitirá más de un registro de asistencia por aprendiz en la misma sesión.
+* RF-07. El sistema mostrará una confirmación cuando el registro sea exitoso.
+* RF-08. El instructor podrá modificar o anular un registro cuando lo considere necesario.
+* RF-09. El sistema generará reportes de asistencia por ficha, aprendiz y fecha.
+* RF-10. El instructor podrá registrar manualmente la asistencia de un aprendiz cuando no sea posible hacerlo mediante el hotspot.
+* RF-11. El sistema solicitará el motivo del registro manual (sin dispositivo compatible, falla del hotspot u otra causa).
+* RF-12. Si el hotspot o la red fallan, el sistema permitirá continuar el registro mediante el mecanismo manual.
+* RF-13. El instructor podrá cerrar la sesión de asistencia.
+* RF-14. El sistema solo aceptará registros mientras la sesión y el hotspot estén activos.
+* RF-15. El instructor podrá definir el tiempo de tolerancia para el registro al momento de abrir la sesión (15 minutos por defecto).
+* RF-16. El sistema clasificará automáticamente cada registro como Presente, Retardo o Ausente, según el momento en que se realice.
+* RF-17. El sistema calculará automáticamente el tiempo de retraso de cada aprendiz.
+* RF-18. El sistema calculará automáticamente las horas de formación perdidas, según las reglas institucionales configuradas.
+* RF-19. El sistema permitirá registrar una justificación asociada a una tardanza, ya sea por parte del aprendiz o del instructor.
+* RF-20. El instructor podrá aceptar o rechazar la justificación presentada.
+* RF-21. El sistema marcará la falla como "Justificada" o "No justificada" según la decisión del instructor, sin alterar las horas de falla ya calculadas.
+* RF-22. El sistema cerrará automáticamente la sesión al cumplirse la duración programada de la jornada, si el instructor no lo ha hecho antes.
+
+---
+
+# Requisitos No Funcionales
+
+* RNF-01. La conexión y el registro del aprendiz al hotspot no deberían tardar más de unos segundos en condiciones normales.
+* RNF-02. El sistema deberá registrar correctamente al menos el 99 % de las conexiones válidas dentro del alcance del hotspot.
+* RNF-03. Solo un instructor autorizado podrá abrir o cerrar una sesión de asistencia.
+* RNF-04. La información registrada deberá almacenarse de forma segura.
+* RNF-05. El sistema deberá soportar grupos de hasta 40 aprendices sin pérdida de rendimiento, considerando el ajuste del límite de dispositivos del hotspot.
+* RNF-06. Todo registro manual y toda decisión sobre justificaciones deberán quedar asociados al instructor responsable, la fecha y la hora.
+* RNF-07. El sistema deberá conservar la información registrada aun cuando se presenten fallas en el hotspot o en la red.
