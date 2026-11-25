@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="980" viewBox="0 0 1360 980" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#333" stroke-width="1.5"/></marker></defs>
+<rect width="1360" height="980" fill="#ffffff"/>
+<rect x="215" y="155" width="930" height="775" rx="8" fill="#f8fafc" stroke="#1e293b" stroke-width="2"/>
+<text x="230" y="180" font-size="15" font-weight="bold" fill="#0f172a">SIGRES — Sistema Integral de Gestión para Restaurantes</text>
+<g stroke="#334155" stroke-width="1.5" fill="none">
+<polyline points="35,130 1325,130"/>
+<polyline points="35,130 35,845"/>
+<polyline points="1325,130 1325,520"/>
+<polyline points="35,360 80,360"/>
+<polyline points="35,690 80,690"/>
+<polyline points="35,845 80,845"/>
+<polyline points="1325,340 1280,340"/>
+<polyline points="1325,520 1280,520"/>
+<polyline points="540,130 540,117"/>
+</g>
+<polygon points="540,102 531,117 549,117" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<text x="515" y="122" font-size="10.5" text-anchor="end" fill="#475569" font-style="italic">generalización: todo el personal es Empleado</text>
+<line x1="558" y1="48" x2="656.3" y2="192.5" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="105" y1="385" x2="306.6" y2="250.6" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="105" y1="385" x2="284.2" y2="321.5" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="105" y1="385" x2="250.9" y2="378.9" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="105" y1="385" x2="311.9" y2="548.8" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="105" y1="385" x2="592.3" y2="466.2" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="105" y1="715" x2="259.9" y2="692.4" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="105" y1="715" x2="275.0" y2="761.1" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="105" y1="870" x2="250.2" y2="873.0" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="1255" y1="365" x2="1093.1" y2="338.6" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="1255" y1="545" x2="763.8" y2="490.0" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="1255" y1="755" x2="1069.5" y2="686.8" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="1255" y1="755" x2="1099.8" y2="770.8" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="440.0" y1="680.0" x2="580.0" y2="680.0" stroke="#334155" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#open)"/>
+<rect x="472.5" y="672.0" width="75.0" height="16.0" rx="3" fill="#ffffff" opacity="0.92"/>
+<text x="510.0" y="684.0" font-size="11" font-style="italic" text-anchor="middle" fill="#334155">«include»</text>
+<line x1="1010.0" y1="353.0" x2="1010.0" y2="397.0" stroke="#334155" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#open)"/>
+<rect x="972.5" y="367.0" width="75.0" height="16.0" rx="3" fill="#ffffff" opacity="0.92"/>
+<text x="1010.0" y="379.0" font-size="11" font-style="italic" text-anchor="middle" fill="#334155">«include»</text>
+<line x1="915.0" y1="780.0" x2="440.0" y2="780.0" stroke="#334155" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#open)"/>
+<rect x="640.0" y="772.0" width="75.0" height="16.0" rx="3" fill="#ffffff" opacity="0.92"/>
+<text x="677.5" y="784.0" font-size="11" font-style="italic" text-anchor="middle" fill="#334155">«include»</text>
+<line x1="915.0" y1="220.0" x2="770.0" y2="220.0" stroke="#b91c1c" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#open)"/>
+<rect x="766.9" y="206.0" width="151.2" height="28.0" rx="3" fill="#ffffff" opacity="0.92"/>
+<text x="842.5" y="218.0" font-size="11" font-style="italic" text-anchor="middle" fill="#b91c1c">«extend»</text>
+<text x="842.5" y="231.0" font-size="9.5" text-anchor="middle" fill="#b91c1c">[credenciales olvidadas]</text>
+<line x1="580.0" y1="575.0" x2="440.0" y2="575.0" stroke="#b91c1c" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#open)"/>
+<rect x="440.2" y="561.0" width="139.6" height="28.0" rx="3" fill="#ffffff" opacity="0.92"/>
+<text x="510.0" y="573.0" font-size="11" font-style="italic" text-anchor="middle" fill="#b91c1c">«extend»</text>
+<text x="510.0" y="586.0" font-size="9.5" text-anchor="middle" fill="#b91c1c">[existencia &lt;= mínimo]</text>
+<line x1="770.0" y1="325.0" x2="915.0" y2="325.0" stroke="#b91c1c" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#open)"/>
+<rect x="772.7" y="311.0" width="139.6" height="28.0" rx="3" fill="#ffffff" opacity="0.92"/>
+<text x="842.5" y="323.0" font-size="11" font-style="italic" text-anchor="middle" fill="#b91c1c">«extend»</text>
+<text x="842.5" y="336.0" font-size="9.5" text-anchor="middle" fill="#b91c1c">[cliente pide dividir]</text>
+<ellipse cx="675" cy="220" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="675" y="217" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-01 Iniciar</text>
+<text x="675" y="232" font-size="11.5" text-anchor="middle" fill="#0f172a">sesión</text>
+<ellipse cx="1010" cy="220" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="1010" y="217" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-02 Recuperar</text>
+<text x="1010" y="232" font-size="11.5" text-anchor="middle" fill="#0f172a">contraseña</text>
+<ellipse cx="345" cy="225" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="345" y="222" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-03 Gestionar</text>
+<text x="345" y="237" font-size="11.5" text-anchor="middle" fill="#0f172a">usuarios y roles</text>
+<ellipse cx="345" cy="300" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="345" y="297" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-04 Gestionar</text>
+<text x="345" y="312" font-size="11.5" text-anchor="middle" fill="#0f172a">menú</text>
+<ellipse cx="345" cy="375" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="345" y="372" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-05 Gestionar</text>
+<text x="345" y="387" font-size="11.5" text-anchor="middle" fill="#0f172a">mesas</text>
+<ellipse cx="675" cy="325" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="675" y="322" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-14 Dividir</text>
+<text x="675" y="337" font-size="11.5" text-anchor="middle" fill="#0f172a">cuenta</text>
+<ellipse cx="1010" cy="325" rx="95" ry="28" fill="#fff7ed" stroke="#1e293b" stroke-width="2.2"/>
+<text x="1010" y="322" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-12 Generar</text>
+<text x="1010" y="337" font-size="11.5" text-anchor="middle" fill="#0f172a">factura</text>
+<ellipse cx="1010" cy="425" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="1010" y="422" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-13 Procesar</text>
+<text x="1010" y="437" font-size="11.5" text-anchor="middle" fill="#0f172a">pago</text>
+<ellipse cx="675" cy="480" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="675" y="477" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-15 Generar reportes</text>
+<text x="675" y="492" font-size="11.5" text-anchor="middle" fill="#0f172a">de ventas</text>
+<ellipse cx="345" cy="575" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="345" y="572" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-10 Registrar movimiento</text>
+<text x="345" y="587" font-size="11.5" text-anchor="middle" fill="#0f172a">de inventario</text>
+<ellipse cx="675" cy="575" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="675" y="572" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-11 Emitir alerta de</text>
+<text x="675" y="587" font-size="11.5" text-anchor="middle" fill="#0f172a">existencias mínimas</text>
+<ellipse cx="345" cy="680" rx="95" ry="28" fill="#fff7ed" stroke="#1e293b" stroke-width="2.2"/>
+<text x="345" y="677" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-06 Registrar</text>
+<text x="345" y="692" font-size="11.5" text-anchor="middle" fill="#0f172a">pedido</text>
+<ellipse cx="675" cy="680" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="675" y="677" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-07 Enviar comanda</text>
+<text x="675" y="692" font-size="11.5" text-anchor="middle" fill="#0f172a">a cocina</text>
+<ellipse cx="345" cy="780" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="345" y="777" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-09 Consultar estado</text>
+<text x="345" y="792" font-size="11.5" text-anchor="middle" fill="#0f172a">del pedido</text>
+<ellipse cx="1010" cy="665" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="1010" y="662" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-16 Consultar</text>
+<text x="1010" y="677" font-size="11.5" text-anchor="middle" fill="#0f172a">menú digital</text>
+<ellipse cx="1010" cy="780" rx="95" ry="28" fill="#ffffff" stroke="#1e293b" stroke-width="1.4"/>
+<text x="1010" y="777" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-17 Consultar</text>
+<text x="1010" y="792" font-size="11.5" text-anchor="middle" fill="#0f172a">consumo actual</text>
+<ellipse cx="345" cy="875" rx="95" ry="28" fill="#fff7ed" stroke="#1e293b" stroke-width="2.2"/>
+<text x="345" y="872" font-size="11.5" text-anchor="middle" fill="#0f172a">CU-08 Actualizar estado</text>
+<text x="345" y="887" font-size="11.5" text-anchor="middle" fill="#0f172a">del pedido</text>
+<g stroke="#1e293b" stroke-width="1.8" fill="#ffffff">
+<circle cx="540" cy="28" r="10"/>
+<line x1="540" y1="38" x2="540" y2="68"/>
+<line x1="522" y1="48" x2="558" y2="48"/>
+<line x1="540" y1="68" x2="526" y2="90"/>
+<line x1="540" y1="68" x2="554" y2="90"/>
+</g>
+<text x="516" y="58" font-size="12.5" font-weight="bold" font-style="italic" text-anchor="end" fill="#0f172a">Empleado (abstracto)</text>
+<g stroke="#1e293b" stroke-width="1.8" fill="#ffffff">
+<circle cx="105" cy="350" r="10"/>
+<line x1="105" y1="360" x2="105" y2="390"/>
+<line x1="87" y1="370" x2="123" y2="370"/>
+<line x1="105" y1="390" x2="91" y2="412"/>
+<line x1="105" y1="390" x2="119" y2="412"/>
+</g>
+<text x="105" y="430" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#0f172a">Administrador</text>
+<g stroke="#1e293b" stroke-width="1.8" fill="#ffffff">
+<circle cx="105" cy="680" r="10"/>
+<line x1="105" y1="690" x2="105" y2="720"/>
+<line x1="87" y1="700" x2="123" y2="700"/>
+<line x1="105" y1="720" x2="91" y2="742"/>
+<line x1="105" y1="720" x2="119" y2="742"/>
+</g>
+<text x="105" y="760" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#0f172a">Mesero</text>
+<g stroke="#1e293b" stroke-width="1.8" fill="#ffffff">
+<circle cx="105" cy="835" r="10"/>
+<line x1="105" y1="845" x2="105" y2="875"/>
+<line x1="87" y1="855" x2="123" y2="855"/>
+<line x1="105" y1="875" x2="91" y2="897"/>
+<line x1="105" y1="875" x2="119" y2="897"/>
+</g>
+<text x="105" y="915" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#0f172a">Cocina</text>
+<g stroke="#1e293b" stroke-width="1.8" fill="#ffffff">
+<circle cx="1255" cy="330" r="10"/>
+<line x1="1255" y1="340" x2="1255" y2="370"/>
+<line x1="1237" y1="350" x2="1273" y2="350"/>
+<line x1="1255" y1="370" x2="1241" y2="392"/>
+<line x1="1255" y1="370" x2="1269" y2="392"/>
+</g>
+<text x="1255" y="410" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#0f172a">Cajero</text>
+<g stroke="#1e293b" stroke-width="1.8" fill="#ffffff">
+<circle cx="1255" cy="510" r="10"/>
+<line x1="1255" y1="520" x2="1255" y2="550"/>
+<line x1="1237" y1="530" x2="1273" y2="530"/>
+<line x1="1255" y1="550" x2="1241" y2="572"/>
+<line x1="1255" y1="550" x2="1269" y2="572"/>
+</g>
+<text x="1255" y="590" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#0f172a">Gerente</text>
+<g stroke="#1e293b" stroke-width="1.8" fill="#ffffff">
+<circle cx="1255" cy="720" r="10"/>
+<line x1="1255" y1="730" x2="1255" y2="760"/>
+<line x1="1237" y1="740" x2="1273" y2="740"/>
+<line x1="1255" y1="760" x2="1241" y2="782"/>
+<line x1="1255" y1="760" x2="1269" y2="782"/>
+</g>
+<text x="1255" y="800" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#0f172a">Cliente (QR)</text>
+<rect x="280" y="942" width="800" height="28" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+<ellipse cx="305" cy="956" rx="12" ry="7" fill="#fff7ed" stroke="#1e293b" stroke-width="2"/>
+<text x="323" y="960" font-size="10.5" fill="#334155">Caso crítico (plantilla extendida en P2)</text>
+<line x1="555" y1="956" x2="595" y2="956" stroke="#334155" stroke-dasharray="6,4" marker-end="url(#open)"/>
+<text x="603" y="960" font-size="10.5" fill="#334155">«include»: siempre ocurre</text>
+<line x1="775" y1="956" x2="815" y2="956" stroke="#b91c1c" stroke-dasharray="6,4" marker-end="url(#open)"/>
+<text x="823" y="960" font-size="10.5" fill="#b91c1c">«extend»: opcional, con [punto de extensión]</text>
+</svg>
