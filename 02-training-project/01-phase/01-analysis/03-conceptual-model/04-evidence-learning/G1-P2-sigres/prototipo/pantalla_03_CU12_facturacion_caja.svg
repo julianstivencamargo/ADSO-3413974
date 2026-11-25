@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="680" viewBox="0 0 1120 680" font-family="Arial, Helvetica, sans-serif">
+<rect width="1120" height="680" fill="#f1f5f9"/>
+<rect x="0" y="0" width="1120" height="46" fill="#0f172a"/>
+<text x="20" y="29" font-size="15" font-weight="bold" fill="#fbbf24">PANTALLA 03 · CU-12 Generar factura (+ CU-13 Procesar pago / CU-14 Dividir cuenta)</text>
+<text x="1100" y="29" font-size="11.5" text-anchor="end" fill="#cbd5e1">Construida nueva (resuelve hallazgo H7 y Ley 1935)</text>
+<rect x="0" y="46" width="1120" height="44" fill="#1e293b"/>
+<text x="24" y="74" font-size="16" font-weight="bold" fill="#ffffff">SIGRES</text>
+<text x="194" y="73" font-size="12.5" font-weight="normal" text-anchor="middle" fill="#cbd5e1">Mesas</text>
+<text x="302" y="73" font-size="12.5" font-weight="normal" text-anchor="middle" fill="#cbd5e1">Pedidos</text>
+<text x="410" y="73" font-size="12.5" font-weight="normal" text-anchor="middle" fill="#cbd5e1">Cocina</text>
+<rect x="472" y="53" width="92" height="30" rx="5" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+<text x="518" y="73" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#38bdf8">Caja</text>
+<text x="626" y="73" font-size="12.5" font-weight="normal" text-anchor="middle" fill="#cbd5e1">Inventario</text>
+<rect x="990" y="55" width="110" height="26" rx="4" fill="#334155"/>
+<text x="1045" y="72" font-size="11" text-anchor="middle" fill="#f8fafc">Cerrar Sesión</text>
+<rect x="18" y="106" width="280" height="554" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="34" y="136" font-size="14" font-weight="bold" fill="#0f172a">Mesas Ocupadas</text>
+<rect x="34" y="156" width="248" height="68" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="46" y="182" font-size="12.5" font-weight="bold" fill="#0f172a">Mesa 01 · Comanda #104</text>
+<text x="46" y="204" font-size="11" fill="#475569">Estado: Entregado · $88.000</text>
+<rect x="34" y="238" width="248" height="68" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.8"/>
+<text x="46" y="264" font-size="12.5" font-weight="bold" fill="#0f172a">Mesa 03 · Comanda #102</text>
+<text x="46" y="286" font-size="11" fill="#475569">Estado: En preparación · $86.000</text>
+<rect x="34" y="320" width="248" height="68" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.8"/>
+<text x="46" y="346" font-size="12.5" font-weight="bold" fill="#0f172a">Mesa 06 · Comanda #101</text>
+<text x="46" y="368" font-size="11" fill="#475569">Estado: Entregado · $52.000</text>
+<rect x="314" y="106" width="420" height="554" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="334" y="136" font-size="15" font-weight="bold" fill="#0f172a">Factura Consecutivo #FAC-00418 · Mesa 01</text>
+<line x1="334" y1="150" x2="714" y2="150" stroke="#e2e8f0"/>
+<text x="334" y="180" font-size="12.5" fill="#1e293b">2x Bandeja Montañera</text>
+<text x="714" y="180" font-size="12.5" text-anchor="end" fill="#0f172a">$56.000</text>
+<text x="334" y="208" font-size="12.5" fill="#1e293b">1x Crema de Ahuyama</text>
+<text x="714" y="208" font-size="12.5" text-anchor="end" fill="#0f172a">$14.000</text>
+<text x="334" y="236" font-size="12.5" fill="#1e293b">3x Limonada Natural</text>
+<text x="714" y="236" font-size="12.5" text-anchor="end" fill="#0f172a">$18.000</text>
+<line x1="334" y1="274" x2="714" y2="274" stroke="#cbd5e1"/>
+<text x="334" y="302" font-size="12.5" fill="#475569">Subtotal base:</text><text x="714" y="302" font-size="12.5" text-anchor="end" fill="#0f172a">$81.481</text>
+<text x="334" y="328" font-size="12.5" fill="#475569">Impoconsumo (8 %):</text><text x="714" y="328" font-size="12.5" text-anchor="end" fill="#0f172a">$6.519</text>
+<rect x="334" y="350" width="380" height="70" rx="6" fill="#fefce8" stroke="#eab308"/>
+<text x="348" y="372" font-size="12" font-weight="bold" fill="#854d0e">Propina voluntaria (Ley 1935 de 2018)</text>
+<text x="348" y="394" font-size="11.5" fill="#713f12">[x] Aceptada por el cliente (10 %): $8.800</text>
+<text x="348" y="410" font-size="10.5" fill="#713f12">[ ] Declinada / otro valor editable</text>
+<text x="334" y="458" font-size="17" font-weight="bold" fill="#0f172a">TOTAL A PAGAR:</text>
+<text x="714" y="458" font-size="18" font-weight="bold" text-anchor="end" fill="#16a34a">$96.800</text>
+<rect x="334" y="490" width="380" height="40" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+<text x="524" y="515" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1d4ed8">Dividir Cuenta entre Comensales («extend» CU-14)</text>
+<rect x="750" y="106" width="352" height="554" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="770" y="136" font-size="15" font-weight="bold" fill="#0f172a">Procesar Pago (CU-13)</text>
+<text x="770" y="164" font-size="12" fill="#475569">Modalidad: [ ] Pago único   [x] Pago mixto (FA-2)</text>
+<rect x="770" y="184" width="312" height="90" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="784" y="206" font-size="12" font-weight="bold" fill="#0f172a">Abono 1 · Nequi / Transferencia</text>
+<text x="784" y="228" font-size="12" fill="#334155">Valor pagado: <tspan font-weight="bold">$50.000</tspan></text>
+<text x="784" y="250" font-size="11" fill="#16a34a">Estado: Confirmado</text>
+<rect x="770" y="290" width="312" height="126" rx="6" fill="#f8fafc" stroke="#2563eb" stroke-width="1.5"/>
+<text x="784" y="312" font-size="12" font-weight="bold" fill="#0f172a">Abono 2 · Efectivo (Saldo: $46.800)</text>
+<text x="784" y="338" font-size="12" fill="#334155">Monto recibido: <tspan font-weight="bold">$50.000</tspan></text>
+<text x="784" y="362" font-size="12.5" font-weight="bold" fill="#0284c7">Cambio a devolver: $3.200</text>
+<text x="784" y="390" font-size="10.5" fill="#64748b">Saldo restante tras confirmar: $0 (100 % cubierto)</text>
+<rect x="770" y="544" width="312" height="44" rx="6" fill="#16a34a"/>
+<text x="926" y="571" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">Confirmar Pago y Liberar Mesa</text>
+<rect x="770" y="598" width="312" height="36" rx="6" fill="#ffffff" stroke="#64748b"/>
+<text x="926" y="621" font-size="12" font-weight="bold" text-anchor="middle" fill="#334155">Imprimir Comprobante</text>
+</svg>
