@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 780" width="1320" height="780" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1320" height="780" fill="#f8fafc"/>
+  <text x="660" y="34" font-size="19" font-weight="bold" text-anchor="middle" fill="#0f172a">SIGRES · Modelo Lógico Relacional (13 Tablas en 3FN · B2)</text>
+
+  <!-- rol -->
+  <g transform="translate(30,65)">
+    <rect width="190" height="90" rx="5" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+    <rect width="190" height="24" rx="5" fill="#e2e8f0" stroke="#334155" stroke-width="1.5"/>
+    <text x="95" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">rol</text>
+    <text x="8" y="42" font-size="11" fill="#0f172a">PK id_rol: INTEGER</text>
+    <text x="8" y="58" font-size="11" fill="#334155">nombre: VARCHAR(40) UQ</text>
+    <text x="8" y="74" font-size="11" fill="#334155">descripcion: VARCHAR(150)</text>
+  </g>
+
+  <!-- usuario -->
+  <g transform="translate(270,65)">
+    <rect width="230" height="125" rx="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+    <rect width="230" height="24" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <text x="115" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e3a8a">usuario</text>
+    <text x="8" y="42" font-size="11" fill="#0f172a">PK id_usuario: INTEGER</text>
+    <text x="8" y="58" font-size="11" fill="#1d4ed8">FK id_rol: INTEGER</text>
+    <text x="8" y="74" font-size="11" fill="#334155">nombre_usuario: VARCHAR(40) UQ</text>
+    <text x="8" y="90" font-size="11" fill="#334155">hash_contrasena: VARCHAR(255)</text>
+    <text x="8" y="106" font-size="11" fill="#334155">activo: BOOLEAN</text>
+  </g>
+
+  <!-- telefono_usuario -->
+  <g transform="translate(30,195)">
+    <rect width="190" height="90" rx="5" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+    <rect width="190" height="24" rx="5" fill="#e2e8f0" stroke="#334155" stroke-width="1.5"/>
+    <text x="95" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">telefono_usuario</text>
+    <text x="8" y="42" font-size="11" fill="#0f172a">PK id_telefono: INTEGER</text>
+    <text x="8" y="58" font-size="11" fill="#1d4ed8">FK id_usuario: INTEGER</text>
+    <text x="8" y="74" font-size="11" fill="#334155">numero: VARCHAR(20)</text>
+  </g>
+
+  <!-- mesa -->
+  <g transform="translate(560,65)">
+    <rect width="190" height="105" rx="5" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+    <rect width="190" height="24" rx="5" fill="#e2e8f0" stroke="#334155" stroke-width="1.5"/>
+    <text x="95" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">mesa</text>
+    <text x="8" y="42" font-size="11" fill="#0f172a">PK id_mesa: INTEGER</text>
+    <text x="8" y="58" font-size="11" fill="#334155">numero: INTEGER UQ</text>
+    <text x="8" y="74" font-size="11" fill="#334155">capacidad: INTEGER</text>
+    <text x="8" y="90" font-size="11" fill="#334155">estado: VARCHAR(20)</text>
+  </g>
+
+  <!-- pedido -->
+  <g transform="translate(270,255)">
+    <rect width="230" height="135" rx="5" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="230" height="24" rx="5" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+    <text x="115" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="#0369a1">pedido</text>
+    <text x="8" y="42" font-size="11" fill="#0f172a">PK id_pedido: INTEGER</text>
+    <text x="8" y="58" font-size="11" fill="#1d4ed8">FK id_mesa: INTEGER</text>
+    <text x="8" y="74" font-size="11" fill="#1d4ed8">FK id_mesero: INTEGER</text>
+    <text x="8" y="90" font-size="11" fill="#334155">fecha_hora: DATETIME</text>
+    <text x="8" y="106" font-size="11" fill="#334155">estado: VARCHAR(25)</text>
+    <text x="8" y="122" font-size="11" fill="#334155">observacion_general: VARCHAR(250)</text>
+  </g>
+
+  <!-- comanda_cocina -->
+  <g transform="translate(30,360)">
+    <rect width="205" height="120" rx="5" fill="#ffffff" stroke="#d97706" stroke-width="1.6"/>
+    <rect width="205" height="24" rx="5" fill="#fef3c7" stroke="#d97706" stroke-width="1.6"/>
+    <text x="102" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="#92400e">comanda_cocina</text>
+    <text x="8" y="42" font-size="11" fill="#0f172a">PK id_comanda: INTEGER</text>
+    <text x="8" y="58" font-size="11" fill="#1d4ed8">FK id_pedido: INTEGER UQ</text>
+    <text x="8" y="74" font-size="11" fill="#1d4ed8">FK id_cocinero: INTEGER</text>
+    <text x="8" y="90" font-size="11" fill="#334155">estado_cocina: VARCHAR(25)</text>
+    <text x="8" y="106" font-size="11" fill="#334155">hora_envio / hora_listo</text>
+  </g>
+
+  <!-- detalle_pedido -->
+  <g transform="translate(560,255)">
+    <rect width="230" height="130" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.8"/>
+    <rect width="230" height="24" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+    <text x="115" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="#14532d">detalle_pedido (N:M)</text>
+    <text x="8" y="42" font-size="11" fill="#0f172a">PK id_detalle_pedido: INTEGER</text>
+    <text x="8" y="58" font-size="11" fill="#1d4ed8">FK id_pedido: INTEGER</text>
+    <text x="8" y="74" font-size="11" fill="#1d4ed8">FK id_plato: INTEGER</text>
+    <text x="8" y="90" font-size="11" fill="#334155">cantidad: INTEGER (&gt;0)</text>
+    <text x="8" y="106" font-size="11" fill="#334155">precio_unitario: DECIMAL(10,2)</text>
+    <text x="8" y="122" font-size="11" fill="#334155">observaciones: VARCHAR(200)</text>
+  </g>
+
+  <!-- plato -->
+  <g transform="translate(840,255)">
+    <rect width="210" height="125" rx="5" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+    <rect width="210" height="24" rx="5" fill="#e2e8f0" stroke="#334155" stroke-width="1.5"/>
+    <text x="105" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">plato</text>
+    <text x="8" y="42" font-size="11" fill="#0f172a">PK id_plato: INTEGER</text>
+    <text x="8" y="58" font-size="11" fill="#1d4ed8">FK id_categoria: INTEGER</text>
+    <text x="8" y="74" font-size="11" fill="#334155">nombre: VARCHAR(100)</text>
+    <text x="8" y="90" font-size="11" fill="#334155">precio: DECIMAL(10,2) (&gt;0)</text>
+    <text x="8" y="106" font-size="11" fill="#334155">disponible: BOOLEAN</text>
+  </g>
+
+  <!-- categoria -->
+  <g transform="translate(840,65)">
+    <rect width="210" height="90" rx="5" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+    <rect width="210" height="24" rx="5" fill="#e2e8f0" stroke="#334155" stroke-width="1.5"/>
+    <text x="105" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">categoria</text>
+    <text x="8" y="42" font-size="11" fill="#0f172a">PK id_categoria: INTEGER</text>
+    <text x="8" y="58" font-size="11" fill="#334155">nombre: VARCHAR(60) UQ</text>
+    <text x="8" y="74" font-size="11" fill="#334155">orden_visual: INTEGER</text>
+  </g>
+
+  <!-- receta_insumo -->
+  <g transform="translate(840,455)">
+    <rect width="210" height="95" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.8"/>
+    <rect width="210" height="24" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+    <text x="105" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="#14532d">receta_insumo (N:M)</text>
+    <text x="8" y="42" font-size="11" fill="#0f172a">PK/FK id_plato: INTEGER</text>
+    <text x="8" y="58" font-size="11" fill="#0f172a">PK/FK id_insumo: INTEGER</text>
+    <text x="8" y="74" font-size="11" fill="#334155">cantidad_porcion: DECIMAL(10,3)</text>
+  </g>
+
+  <!-- insumo -->
+  <g transform="translate(1095,445)">
+    <rect width="200" height="115" rx="5" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+    <rect width="200" height="24" rx="5" fill="#e2e8f0" stroke="#334155" stroke-width="1.5"/>
+    <text x="100" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">insumo</text>
+    <text x="8" y="42" font-size="11" fill="#0f172a">PK id_insumo: INTEGER</text>
+    <text x="8" y="58" font-size="11" fill="#334155">nombre: VARCHAR(80) UQ</text>
+    <text x="8" y="74" font-size="11" fill="#334155">unidad_medida: VARCHAR(20)</text>
+    <text x="8" y="90" font-size="11" fill="#334155">stock_actual: DECIMAL(10,3)</text>
+    <text x="8" y="106" font-size="11" fill="#334155">stock_minimo: DECIMAL(10,3)</text>
+  </g>
+
+  <!-- factura -->
+  <g transform="translate(270,475)">
+    <rect width="230" height="150" rx="5" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8"/>
+    <rect width="230" height="24" rx="5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.8"/>
+    <text x="115" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="#5b21b6">factura</text>
+    <text x="8" y="42" font-size="11" fill="#0f172a">PK id_factura: INTEGER</text>
+    <text x="8" y="58" font-size="11" fill="#1d4ed8">FK id_pedido: INTEGER UQ</text>
+    <text x="8" y="74" font-size="11" fill="#1d4ed8">FK id_cajero: INTEGER</text>
+    <text x="8" y="90" font-size="11" fill="#334155">numero_factura: VARCHAR(30) UQ</text>
+    <text x="8" y="106" font-size="11" fill="#334155">subtotal / impuesto / propina</text>
+    <text x="8" y="122" font-size="11" fill="#334155">descuento / total: DECIMAL(10,2)</text>
+    <text x="8" y="138" font-size="11" fill="#334155">fecha_emision: DATETIME</text>
+  </g>
+
+  <!-- pago -->
+  <g transform="translate(560,485)">
+    <rect width="230" height="125" rx="5" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8"/>
+    <rect width="230" height="24" rx="5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.8"/>
+    <text x="115" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="#5b21b6">pago</text>
+    <text x="8" y="42" font-size="11" fill="#0f172a">PK id_pago: INTEGER</text>
+    <text x="8" y="58" font-size="11" fill="#1d4ed8">FK id_factura: INTEGER</text>
+    <text x="8" y="74" font-size="11" fill="#334155">metodo: VARCHAR(25)</text>
+    <text x="8" y="90" font-size="11" fill="#334155">monto: DECIMAL(10,2) (&gt;0)</text>
+    <text x="8" y="106" font-size="11" fill="#334155">referencia / fecha_pago</text>
+  </g>
+
+  <!-- Connectors -->
+  <line x1="220" y1="110" x2="270" y2="110" stroke="#475569" stroke-width="1.5"/>
+  <path d="M 270 155 L 240 155 L 240 240 L 220 240" fill="none" stroke="#475569" stroke-width="1.5"/>
+  <line x1="385" y1="190" x2="385" y2="255" stroke="#475569" stroke-width="1.5"/>
+  <path d="M 560 120 L 450 120 L 450 255" fill="none" stroke="#475569" stroke-width="1.5"/>
+  <line x1="270" y1="330" x2="235" y2="415" stroke="#d97706" stroke-width="1.5"/>
+  <line x1="500" y1="320" x2="560" y2="320" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="790" y1="320" x2="840" y2="320" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="945" y1="155" x2="945" y2="255" stroke="#475569" stroke-width="1.5"/>
+  <line x1="945" y1="380" x2="945" y2="455" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="1050" y1="500" x2="1095" y2="500" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="385" y1="390" x2="385" y2="475" stroke="#7c3aed" stroke-width="1.5"/>
+  <line x1="500" y1="545" x2="560" y2="545" stroke="#7c3aed" stroke-width="1.5"/>
+
+  <text x="660" y="725" font-size="12" text-anchor="middle" fill="#334155">Estándar de nombrado: tablas en singular, columnas en snake_case, PK id_&lt;tabla&gt;. Todas las N:M resueltas con tablas intermedias.</text>
+</svg>
