@@ -149,9 +149,9 @@ flowchart TD
 | Diagrama 1 | `[cancelado antes de confirmar]` | CU-06 · Flujo alterno `5a` (cancelar productos antes de confirmar) |
 | Diagrama 1 | `[campos incompletos]` | CU-06 · Excepción `4b` |
 | Diagrama 1 | `[producto agotado]` | CU-06 · Excepción `4c` |
-| Diagrama 1 | `[insumo agotado en cocina]` | CU-08 · Flujo alterno `3a` |
+| Diagrama 1 | `[insumo agotado en cocina]` | CU-08 · Flujo alterno `2a` |
 | Diagrama 2 | `[sin pedidos activos o entregados]` | CU-12 · Excepción `2b` |
-| Diagrama 2 | `[factura ya pagada]` | CU-12 · Excepción `6b` |
+| Diagrama 2 | `[factura ya pagada]` | CU-12 · Excepción `7b` |
 | Diagrama 2 | `[cliente solicita dividir cuenta]` | CU-12 · Flujo alterno `3a` (extiende a CU-14) |
 | Diagrama 2 | `[propina voluntaria aceptada]` / `[sin propina]` | CU-12 · Paso 3 y flujo alterno `4a` |
 | Diagrama 2 | `[pago mixto con varios métodos]` / `[saldo restante > 0]` | CU-12 · Flujo alterno `5a` |
