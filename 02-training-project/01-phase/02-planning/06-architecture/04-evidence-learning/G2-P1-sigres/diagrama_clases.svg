@@ -1,220 +1,307 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 860" width="1320" height="860" font-family="Segoe UI, Arial, sans-serif">
-  <rect width="1320" height="860" fill="#f8fafc"/>
-  <text x="660" y="34" font-size="20" font-weight="bold" text-anchor="middle" fill="#0f172a">SIGRES · Diagrama de Clases UML y Patrones de Diseño (G2-P1)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1550 960" width="1550" height="960" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1550" height="960" fill="#f8fafc"/>
+  <text x="775" y="34" font-size="20" font-weight="bold" text-anchor="middle" fill="#0f172a">SIGRES · Diagrama de Clases UML y Patrones de Diseño (G2-P1)</text>
 
-  <!-- Empleado Abstract -->
-  <g transform="translate(40,65)">
-    <rect width="230" height="115" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
-    <rect width="230" height="38" rx="6" fill="#e2e8f0" stroke="#334155" stroke-width="1.8"/>
-    <text x="115" y="16" font-size="11" font-style="italic" text-anchor="middle" fill="#475569">&lt;&lt;abstract&gt;&gt;</text>
-    <text x="115" y="32" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">Empleado</text>
-    <text x="10" y="56" font-size="11" fill="#1e293b">- idEmpleado: int</text>
-    <text x="10" y="72" font-size="11" fill="#1e293b">- usuario: string</text>
-    <text x="10" y="88" font-size="11" fill="#1e293b">- hashContrasena: string</text>
-    <line x1="0" y1="95" x2="230" y2="95" stroke="#cbd5e1"/>
-    <text x="10" y="109" font-size="11" fill="#0f172a">+ autenticar(clave: string): boolean</text>
+  <!-- Row 1: Empleado + Mesa + FachadaPedidoCocina -->
+  <g transform="translate(260,55)">
+    <rect width="260" height="122" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+    <rect width="260" height="38" rx="6" fill="#e2e8f0" stroke="#334155" stroke-width="1.8"/>
+    <text x="130" y="16" font-size="11" font-style="italic" text-anchor="middle" fill="#475569">&lt;&lt;abstract&gt;&gt;</text>
+    <text x="130" y="32" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">Empleado</text>
+    <text x="10" y="54" font-size="11" fill="#1e293b">- idEmpleado: int</text>
+    <text x="10" y="69" font-size="11" fill="#1e293b">- usuario: string</text>
+    <text x="10" y="84" font-size="11" fill="#1e293b">- hashContrasena: string</text>
+    <text x="10" y="99" font-size="11" fill="#1e293b">- activo: boolean</text>
+    <text x="10" y="116" font-size="11" fill="#0f172a">+ autenticar(clave: string): boolean</text>
   </g>
-
-  <!-- Subclases Empleado -->
-  <g transform="translate(20,235)">
-    <rect width="175" height="75" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-    <rect width="175" height="26" rx="6" fill="#dbeafe" stroke="#334155" stroke-width="1.6"/>
-    <text x="87" y="18" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Mesero</text>
-    <text x="8" y="44" font-size="11" fill="#1e293b">- zonaAsignada: string</text>
-    <text x="8" y="64" font-size="11" fill="#0f172a">+ abrirPedido(m: Mesa): Pedido</text>
-  </g>
-
-  <g transform="translate(215,235)">
-    <rect width="190" height="75" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-    <rect width="190" height="26" rx="6" fill="#dbeafe" stroke="#334155" stroke-width="1.6"/>
-    <text x="95" y="18" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Cocinero</text>
-    <text x="8" y="44" font-size="11" fill="#1e293b">- estacionCocina: string</text>
-    <text x="8" y="64" font-size="11" fill="#0f172a">+ avanzarComanda(c, est): void</text>
-  </g>
-
-  <g transform="translate(425,235)">
-    <rect width="180" height="75" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-    <rect width="180" height="26" rx="6" fill="#dbeafe" stroke="#334155" stroke-width="1.6"/>
-    <text x="90" y="18" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Cajero</text>
-    <text x="8" y="44" font-size="11" fill="#1e293b">- idCaja: int</text>
-    <text x="8" y="64" font-size="11" fill="#0f172a">+ emitirFactura(p, prop): Factura</text>
-  </g>
-
-  <!-- Inheritance arrows -->
-  <path d="M 107 235 L 107 205 L 155 205 L 155 180" fill="none" stroke="#334155" stroke-width="1.5"/>
-  <path d="M 310 235 L 310 205 L 155 205" fill="none" stroke="#334155" stroke-width="1.5"/>
-  <path d="M 515 235 L 515 205 L 155 205" fill="none" stroke="#334155" stroke-width="1.5"/>
-  <polygon points="155,180 148,192 162,192" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
 
   <!-- Mesa -->
-  <g transform="translate(340,65)">
-    <rect width="200" height="105" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-    <rect width="200" height="26" rx="6" fill="#f1f5f9" stroke="#334155" stroke-width="1.6"/>
-    <text x="100" y="18" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">Mesa</text>
+  <g transform="translate(15,315)">
+    <rect width="185" height="105" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
+    <rect width="185" height="26" rx="6" fill="#f1f5f9" stroke="#334155" stroke-width="1.6"/>
+    <text x="92" y="18" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">Mesa</text>
     <text x="8" y="44" font-size="11" fill="#1e293b">- idMesa: int</text>
     <text x="8" y="60" font-size="11" fill="#1e293b">- numero: int</text>
     <text x="8" y="76" font-size="11" fill="#1e293b">- estado: string</text>
-    <text x="8" y="96" font-size="11" fill="#0f172a">+ cambiarEstado(e: string): void</text>
-  </g>
-
-  <!-- Pedido -->
-  <g transform="translate(20,380)">
-    <rect width="235" height="120" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-    <rect width="235" height="28" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
-    <text x="117" y="19" font-size="13" font-weight="bold" text-anchor="middle" fill="#0369a1">Pedido</text>
-    <text x="10" y="46" font-size="11" fill="#1e293b">- idPedido: int</text>
-    <text x="10" y="62" font-size="11" fill="#1e293b">- fechaHora: Date</text>
-    <text x="10" y="78" font-size="11" fill="#1e293b">- estado: string</text>
-    <line x1="0" y1="86" x2="235" y2="86" stroke="#bae6fd"/>
-    <text x="10" y="101" font-size="11" fill="#0f172a">+ agregarDetalle(p, cant, obs)</text>
-    <text x="10" y="115" font-size="11" fill="#0f172a">+ calcularSubtotal(): number</text>
-  </g>
-
-  <!-- DetallePedido -->
-  <g transform="translate(20,570)">
-    <rect width="235" height="110" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-    <rect width="235" height="26" rx="6" fill="#f1f5f9" stroke="#334155" stroke-width="1.6"/>
-    <text x="117" y="18" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">DetallePedido</text>
-    <text x="10" y="44" font-size="11" fill="#1e293b">- idDetalle: int</text>
-    <text x="10" y="60" font-size="11" fill="#1e293b">- cantidad: int</text>
-    <text x="10" y="76" font-size="11" fill="#1e293b">- precioUnitario: number</text>
-    <text x="10" y="98" font-size="11" fill="#0f172a">+ calcularImporte(): number</text>
-  </g>
-
-  <!-- Plato -->
-  <g transform="translate(310,570)">
-    <rect width="210" height="110" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-    <rect width="210" height="26" rx="6" fill="#f1f5f9" stroke="#334155" stroke-width="1.6"/>
-    <text x="105" y="18" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">Plato</text>
-    <text x="10" y="44" font-size="11" fill="#1e293b">- idPlato: int</text>
-    <text x="10" y="60" font-size="11" fill="#1e293b">- nombre: string</text>
-    <text x="10" y="76" font-size="11" fill="#1e293b">- precio: number</text>
-    <text x="10" y="98" font-size="11" fill="#0f172a">+ actualizarDisp(b: boolean)</text>
-  </g>
-
-  <!-- ComandaCocina -->
-  <g transform="translate(310,385)">
-    <rect width="210" height="110" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-    <rect width="210" height="26" rx="6" fill="#fef3c7" stroke="#334155" stroke-width="1.6"/>
-    <text x="105" y="18" font-size="12" font-weight="bold" text-anchor="middle" fill="#92400e">ComandaCocina</text>
-    <text x="10" y="44" font-size="11" fill="#1e293b">- idComanda: int</text>
-    <text x="10" y="60" font-size="11" fill="#1e293b">- estadoCocina: string</text>
-    <text x="10" y="76" font-size="11" fill="#1e293b">- horaEnvio: Date</text>
-    <text x="10" y="98" font-size="11" fill="#0f172a">+ marcarListo(): void</text>
+    <text x="8" y="96" font-size="11" fill="#0f172a">+ cambiarEstado(est: string): void</text>
   </g>
 
   <!-- FachadaPedidoCocina (GoF Facade) -->
-  <g transform="translate(595,65)">
-    <rect width="275" height="90" rx="6" fill="#f0fdf4" stroke="#15803d" stroke-width="2"/>
-    <rect width="275" height="34" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
-    <text x="137" y="15" font-size="11" text-anchor="middle" fill="#166534">&lt;&lt;Patrón GoF: Facade&gt;&gt;</text>
-    <text x="137" y="30" font-size="12" font-weight="bold" text-anchor="middle" fill="#14532d">FachadaPedidoCocina</text>
-    <text x="10" y="58" font-size="11" fill="#14532d">+ confirmarYDespachar(idMesa, items):</text>
-    <text x="18" y="74" font-size="11" fill="#14532d">ComandaCocina</text>
+  <g transform="translate(1055,55)">
+    <rect width="340" height="92" rx="6" fill="#f0fdf4" stroke="#15803d" stroke-width="2"/>
+    <rect width="340" height="34" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+    <text x="170" y="15" font-size="11" text-anchor="middle" fill="#166534">&lt;&lt;Patrón GoF: Facade&gt;&gt;</text>
+    <text x="170" y="30" font-size="12" font-weight="bold" text-anchor="middle" fill="#14532d">FachadaPedidoCocina</text>
+    <text x="10" y="58" font-size="11" fill="#14532d">+ confirmarYDespachar(idMesa: int, idMesero: int,</text>
+    <text x="18" y="74" font-size="11" fill="#14532d">items: DetallePedido[]): ComandaCocina</text>
   </g>
 
-  <!-- Factura -->
-  <g transform="translate(600,375)">
-    <rect width="250" height="135" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
-    <rect width="250" height="28" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
-    <text x="125" y="19" font-size="13" font-weight="bold" text-anchor="middle" fill="#5b21b6">Factura</text>
+  <!-- Row 2: Subclases de Empleado -->
+  <g transform="translate(30,210)">
+    <rect width="195" height="78" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
+    <rect width="195" height="25" rx="6" fill="#dbeafe" stroke="#334155" stroke-width="1.6"/>
+    <text x="97" y="17" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Administrador</text>
+    <text x="8" y="42" font-size="11" fill="#1e293b">- nivelAcceso: string</text>
+    <text x="8" y="60" font-size="11" fill="#0f172a">+ gestionarMenu(p: Plato): void</text>
+  </g>
+
+  <g transform="translate(245,210)">
+    <rect width="185" height="78" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
+    <rect width="185" height="25" rx="6" fill="#dbeafe" stroke="#334155" stroke-width="1.6"/>
+    <text x="92" y="17" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Mesero</text>
+    <text x="8" y="42" font-size="11" fill="#1e293b">- zonaAsignada: string</text>
+    <text x="8" y="60" font-size="11" fill="#0f172a">+ abrirPedido(m: Mesa): Pedido</text>
+  </g>
+
+  <g transform="translate(450,210)">
+    <rect width="215" height="78" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
+    <rect width="215" height="25" rx="6" fill="#dbeafe" stroke="#334155" stroke-width="1.6"/>
+    <text x="107" y="17" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Cocinero</text>
+    <text x="8" y="42" font-size="11" fill="#1e293b">- estacionCocina: string</text>
+    <text x="8" y="60" font-size="11" fill="#0f172a">+ avanzarComanda(c, est): void</text>
+  </g>
+
+  <g transform="translate(685,210)">
+    <rect width="205" height="78" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
+    <rect width="205" height="25" rx="6" fill="#dbeafe" stroke="#334155" stroke-width="1.6"/>
+    <text x="102" y="17" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Cajero</text>
+    <text x="8" y="42" font-size="11" fill="#1e293b">- idCaja: int</text>
+    <text x="8" y="60" font-size="11" fill="#0f172a">+ emitirFactura(p, prop): Factura</text>
+  </g>
+
+  <g transform="translate(910,210)">
+    <rect width="210" height="78" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
+    <rect width="210" height="25" rx="6" fill="#dbeafe" stroke="#334155" stroke-width="1.6"/>
+    <text x="105" y="17" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Gerente</text>
+    <text x="8" y="42" font-size="11" fill="#1e293b">- sucursal: string</text>
+    <text x="8" y="60" font-size="11" fill="#0f172a">+ consultarReporteVentas(i, f)</text>
+  </g>
+
+  <g transform="translate(1145,205)">
+    <rect width="225" height="86" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+    <rect width="225" height="25" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.6"/>
+    <text x="112" y="17" font-size="12" font-weight="bold" text-anchor="middle" fill="#5b21b6">ReporteVentas</text>
+    <text x="8" y="42" font-size="11" fill="#1e293b">- fechaInicio / fechaFin: Date</text>
+    <text x="8" y="57" font-size="11" fill="#1e293b">- totalVentas / totalPropinas</text>
+    <text x="8" y="75" font-size="11" fill="#0f172a">+ calcularTotales(f: Factura[])</text>
+  </g>
+
+  <!-- Inheritance bus -->
+  <path d="M 127 210 L 127 192 L 1015 192 L 1015 210" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <line x1="337" y1="210" x2="337" y2="192" stroke="#334155" stroke-width="1.5"/>
+  <line x1="557" y1="210" x2="557" y2="192" stroke="#334155" stroke-width="1.5"/>
+  <line x1="787" y1="210" x2="787" y2="192" stroke="#334155" stroke-width="1.5"/>
+  <line x1="390" y1="192" x2="390" y2="177" stroke="#334155" stroke-width="1.5"/>
+  <polygon points="390,177 383,189 397,189" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+  <!-- Gerente -> ReporteVentas ..> Factura -->
+  <line x1="1120" y1="248" x2="1145" y2="248" stroke="#7c3aed" stroke-width="1.5"/>
+  <path d="M 1257 291 L 1257 325 L 980 325 L 980 355" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="980,355 975,345 985,345" fill="#7c3aed"/>
+
+  <!-- Row 3: Pedido, ComandaCocina, Factura, EstrategiaPago -->
+  <g transform="translate(245,355)">
+    <rect width="240" height="122" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="240" height="28" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+    <text x="120" y="19" font-size="13" font-weight="bold" text-anchor="middle" fill="#0369a1">Pedido</text>
+    <text x="10" y="46" font-size="11" fill="#1e293b">- idPedido: int</text>
+    <text x="10" y="62" font-size="11" fill="#1e293b">- fechaHora: Date</text>
+    <text x="10" y="78" font-size="11" fill="#1e293b">- estado: string</text>
+    <text x="10" y="98" font-size="11" fill="#0f172a">+ agregarDetalle(p: Plato, c: int)</text>
+    <text x="10" y="114" font-size="11" fill="#0f172a">+ calcularSubtotal(): number</text>
+  </g>
+
+  <g transform="translate(535,355)">
+    <rect width="215" height="122" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
+    <rect width="215" height="26" rx="6" fill="#fef3c7" stroke="#334155" stroke-width="1.6"/>
+    <text x="107" y="18" font-size="12" font-weight="bold" text-anchor="middle" fill="#92400e">ComandaCocina</text>
+    <text x="8" y="44" font-size="11" fill="#1e293b">- idComanda: int</text>
+    <text x="8" y="60" font-size="11" fill="#1e293b">- estadoCocina: string</text>
+    <text x="8" y="76" font-size="11" fill="#1e293b">- horaEnvio / horaListo: Date</text>
+    <text x="8" y="96" font-size="11" fill="#0f172a">+ marcarEnPreparacion(): void</text>
+    <text x="8" y="112" font-size="11" fill="#0f172a">+ marcarListo(): void</text>
+  </g>
+
+  <g transform="translate(815,355)">
+    <rect width="245" height="135" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <rect width="245" height="28" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="122" y="19" font-size="13" font-weight="bold" text-anchor="middle" fill="#5b21b6">Factura</text>
     <text x="10" y="46" font-size="11" fill="#1e293b">- idFactura: int</text>
     <text x="10" y="62" font-size="11" fill="#1e293b">- numeroFactura: string</text>
-    <text x="10" y="78" font-size="11" fill="#1e293b">- subtotal: number</text>
-    <text x="10" y="94" font-size="11" fill="#1e293b">- propina: number</text>
-    <text x="10" y="110" font-size="11" fill="#1e293b">- total: number</text>
-    <text x="10" y="128" font-size="11" fill="#0f172a">+ aplicarPago(est: EstrategiaPago, m)</text>
+    <text x="10" y="78" font-size="11" fill="#1e293b">- subtotal / impuesto / propina</text>
+    <text x="10" y="94" font-size="11" fill="#1e293b">- total: number</text>
+    <text x="10" y="112" font-size="11" fill="#0f172a">+ aplicarPago(est, m: number): Pago</text>
+    <text x="10" y="128" font-size="11" fill="#0f172a">+ verificarSaldoPendiente(): number</text>
   </g>
 
-  <!-- Pago -->
-  <g transform="translate(600,575)">
-    <rect width="230" height="105" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
-    <rect width="230" height="26" rx="6" fill="#f1f5f9" stroke="#334155" stroke-width="1.6"/>
-    <text x="115" y="18" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">Pago</text>
+  <g transform="translate(1130,360)">
+    <rect width="335" height="80" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+    <rect width="335" height="36" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="167" y="15" font-size="11" text-anchor="middle" fill="#92400e">&lt;&lt;interface · Patrón Strategy&gt;&gt;</text>
+    <text x="167" y="31" font-size="13" font-weight="bold" text-anchor="middle" fill="#78350f">EstrategiaPago</text>
+    <text x="10" y="60" font-size="11" fill="#78350f">+ procesarPago(monto: number, ref: string): Pago</text>
+  </g>
+
+  <!-- Row 4: DetallePedido, Plato, Categoria, RecetaInsumo, Insumo, Pago, Estrategias -->
+  <g transform="translate(245,540)">
+    <rect width="240" height="105" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
+    <rect width="240" height="26" rx="6" fill="#f1f5f9" stroke="#334155" stroke-width="1.6"/>
+    <text x="120" y="18" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">DetallePedido</text>
+    <text x="10" y="44" font-size="11" fill="#1e293b">- idDetalle: int</text>
+    <text x="10" y="60" font-size="11" fill="#1e293b">- cantidad: int</text>
+    <text x="10" y="76" font-size="11" fill="#1e293b">- precioUnitario: number</text>
+    <text x="10" y="96" font-size="11" fill="#0f172a">+ calcularImporte(): number</text>
+  </g>
+
+  <g transform="translate(535,540)">
+    <rect width="215" height="105" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
+    <rect width="215" height="26" rx="6" fill="#f1f5f9" stroke="#334155" stroke-width="1.6"/>
+    <text x="107" y="18" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">Plato</text>
+    <text x="10" y="44" font-size="11" fill="#1e293b">- idPlato: int</text>
+    <text x="10" y="60" font-size="11" fill="#1e293b">- nombre: string</text>
+    <text x="10" y="76" font-size="11" fill="#1e293b">- precio: number / disponible</text>
+    <text x="10" y="96" font-size="11" fill="#0f172a">+ actualizarDisponibilidad(b): void</text>
+  </g>
+
+  <g transform="translate(535,700)">
+    <rect width="215" height="80" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
+    <rect width="215" height="24" rx="6" fill="#f1f5f9" stroke="#334155" stroke-width="1.6"/>
+    <text x="107" y="17" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">Categoria</text>
+    <text x="10" y="44" font-size="11" fill="#1e293b">- idCategoria: int</text>
+    <text x="10" y="60" font-size="11" fill="#1e293b">- nombre: string / orden: int</text>
+  </g>
+
+  <g transform="translate(30,540)">
+    <rect width="175" height="85" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.6"/>
+    <rect width="175" height="25" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/>
+    <text x="87" y="17" font-size="12" font-weight="bold" text-anchor="middle" fill="#14532d">RecetaInsumo</text>
+    <text x="8" y="44" font-size="11" fill="#1e293b">- cantidadPorcion: number</text>
+    <text x="8" y="66" font-size="11" fill="#0f172a">+ calcularConsumo(u): number</text>
+  </g>
+
+  <g transform="translate(30,680)">
+    <rect width="195" height="105" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.6"/>
+    <rect width="195" height="25" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/>
+    <text x="97" y="17" font-size="12" font-weight="bold" text-anchor="middle" fill="#14532d">Insumo</text>
+    <text x="8" y="44" font-size="11" fill="#1e293b">- idInsumo: int / nombre</text>
+    <text x="8" y="60" font-size="11" fill="#1e293b">- stockActual / stockMinimo</text>
+    <text x="8" y="80" font-size="11" fill="#0f172a">+ descontar(cant: number): void</text>
+    <text x="8" y="96" font-size="11" fill="#0f172a">+ estaEnMinimo(): boolean</text>
+  </g>
+
+  <g transform="translate(815,550)">
+    <rect width="245" height="105" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.6"/>
+    <rect width="245" height="26" rx="6" fill="#f1f5f9" stroke="#334155" stroke-width="1.6"/>
+    <text x="122" y="18" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">Pago</text>
     <text x="10" y="44" font-size="11" fill="#1e293b">- idPago: int</text>
     <text x="10" y="60" font-size="11" fill="#1e293b">- metodo: string</text>
     <text x="10" y="76" font-size="11" fill="#1e293b">- monto: number</text>
-    <text x="10" y="92" font-size="11" fill="#1e293b">- fechaPago: Date</text>
+    <text x="10" y="92" font-size="11" fill="#1e293b">- referencia / fechaPago</text>
   </g>
 
-  <!-- EstrategiaPago Interface (GoF Strategy) -->
-  <g transform="translate(945,380)">
-    <rect width="295" height="82" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
-    <rect width="295" height="36" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
-    <text x="147" y="15" font-size="11" text-anchor="middle" fill="#92400e">&lt;&lt;interface · Patrón Strategy&gt;&gt;</text>
-    <text x="147" y="31" font-size="13" font-weight="bold" text-anchor="middle" fill="#78350f">EstrategiaPago</text>
-    <text x="10" y="60" font-size="11" fill="#78350f">+ procesarPago(monto: number, ref): Pago</text>
+  <g transform="translate(1070,515)">
+    <rect width="122" height="72" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1.6"/>
+    <rect width="122" height="24" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.6"/>
+    <text x="61" y="16" font-size="11" font-weight="bold" text-anchor="middle" fill="#78350f">PagoEfectivo</text>
+    <text x="6" y="44" font-size="10" fill="#1e293b">+ procesarPago(m, r)</text>
+    <text x="6" y="59" font-size="10" fill="#1e293b">: Pago</text>
   </g>
 
-  <!-- Estrategia Implementations -->
-  <g transform="translate(880,530)">
-    <rect width="125" height="65" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1.6"/>
-    <rect width="125" height="24" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.6"/>
-    <text x="62" y="16" font-size="11" font-weight="bold" text-anchor="middle" fill="#78350f">PagoEfectivo</text>
-    <text x="8" y="45" font-size="10" fill="#1e293b">+ procesarPago()</text>
+  <g transform="translate(1202,515)">
+    <rect width="122" height="72" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1.6"/>
+    <rect width="122" height="24" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.6"/>
+    <text x="61" y="16" font-size="11" font-weight="bold" text-anchor="middle" fill="#78350f">PagoTarjeta</text>
+    <text x="6" y="44" font-size="10" fill="#1e293b">+ procesarPago(m, r)</text>
+    <text x="6" y="59" font-size="10" fill="#1e293b">: Pago</text>
   </g>
 
-  <g transform="translate(1020,530)">
-    <rect width="125" height="65" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1.6"/>
-    <rect width="125" height="24" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.6"/>
-    <text x="62" y="16" font-size="11" font-weight="bold" text-anchor="middle" fill="#78350f">PagoTarjeta</text>
-    <text x="8" y="45" font-size="10" fill="#1e293b">+ procesarPago()</text>
+  <g transform="translate(1334,515)">
+    <rect width="146" height="72" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1.6"/>
+    <rect width="146" height="24" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.6"/>
+    <text x="73" y="16" font-size="11" font-weight="bold" text-anchor="middle" fill="#78350f">PagoTransferencia</text>
+    <text x="6" y="44" font-size="10" fill="#1e293b">+ procesarPago(m, r)</text>
+    <text x="6" y="59" font-size="10" fill="#1e293b">: Pago</text>
   </g>
 
-  <g transform="translate(1160,530)">
-    <rect width="135" height="65" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1.6"/>
-    <rect width="135" height="24" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.6"/>
-    <text x="67" y="16" font-size="11" font-weight="bold" text-anchor="middle" fill="#78350f">PagoTransferencia</text>
-    <text x="8" y="45" font-size="10" fill="#1e293b">+ procesarPago()</text>
-  </g>
+  <!-- CONNECTIONS (Clean orthogonal routing, zero box overlaps) -->
+  <!-- Mesero 1 -> 0..* Pedido -->
+  <line x1="337" y1="288" x2="337" y2="355" stroke="#334155" stroke-width="1.5"/>
+  <text x="344" y="305" font-size="11" fill="#334155">1</text>
+  <text x="344" y="346" font-size="11" fill="#334155">0..*</text>
 
-  <!-- Relations & Multiplicities -->
-  <!-- Mesero -> Pedido -->
-  <line x1="107" y1="310" x2="107" y2="380" stroke="#334155" stroke-width="1.5"/>
-  <text x="112" y="328" font-size="11" fill="#334155">1</text>
-  <text x="112" y="370" font-size="11" fill="#334155">0..*</text>
+  <!-- Mesa 1 o a  0..* Pedido (Aggregation hollow diamond outside Mesa) -->
+  <line x1="216" y1="385" x2="245" y2="385" stroke="#0f172a" stroke-width="1.6"/>
+  <polygon points="200,385 208,380 216,385 208,390" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+  <text x="205" y="373" font-size="11" fill="#0f172a">1</text>
+  <text x="226" y="405" font-size="11" fill="#0f172a">0..*</text>
 
-  <!-- Pedido a DetallePedido (Composition) -->
-  <line x1="137" y1="500" x2="137" y2="570" stroke="#0f172a" stroke-width="1.6"/>
-  <polygon points="137,500 132,510 137,520 142,510" fill="#0f172a"/>
-  <text x="145" y="516" font-size="11" fill="#0f172a">1</text>
-  <text x="145" y="562" font-size="11" fill="#0f172a">1..*</text>
+  <!-- Cocinero 1 -> 0..* ComandaCocina -->
+  <line x1="600" y1="288" x2="600" y2="355" stroke="#334155" stroke-width="1.5"/>
+  <text x="606" y="305" font-size="11" fill="#334155">1</text>
+  <text x="606" y="346" font-size="11" fill="#334155">0..*</text>
 
-  <!-- DetallePedido -> Plato -->
-  <line x1="255" y1="625" x2="310" y2="625" stroke="#334155" stroke-width="1.5"/>
-  <text x="260" y="618" font-size="11" fill="#334155">0..*</text>
-  <text x="295" y="618" font-size="11" fill="#334155">1</text>
+  <!-- Cajero 1 -> 0..* Factura -->
+  <path d="M 850 288 L 850 355" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="856" y="305" font-size="11" fill="#334155">1</text>
+  <text x="856" y="346" font-size="11" fill="#334155">0..*</text>
 
-  <!-- Pedido -> ComandaCocina -->
-  <line x1="255" y1="440" x2="310" y2="440" stroke="#334155" stroke-width="1.5"/>
-  <text x="260" y="433" font-size="11" fill="#334155">1</text>
-  <text x="295" y="433" font-size="11" fill="#334155">1</text>
+  <!-- Pedido 1  a  1..* DetallePedido (Composition filled diamond) -->
+  <line x1="365" y1="477" x2="365" y2="540" stroke="#0f172a" stroke-width="1.6"/>
+  <polygon points="365,477 360,487 365,497 370,487" fill="#0f172a"/>
+  <text x="374" y="494" font-size="11" fill="#0f172a">1</text>
+  <text x="374" y="532" font-size="11" fill="#0f172a">1..*</text>
 
-  <!-- Pedido -> Factura -->
-  <path d="M 255 475 L 550 475 L 550 440 L 600 440" fill="none" stroke="#334155" stroke-width="1.5"/>
-  <text x="262" y="490" font-size="11" fill="#334155">1</text>
-  <text x="572" y="433" font-size="11" fill="#334155">0..1</text>
+  <!-- DetallePedido 0..* -> 1 Plato -->
+  <line x1="485" y1="592" x2="535" y2="592" stroke="#334155" stroke-width="1.5"/>
+  <text x="490" y="585" font-size="11" fill="#334155">0..*</text>
+  <text x="520" y="585" font-size="11" fill="#334155">1</text>
 
-  <!-- Factura a Pago (Composition) -->
-  <line x1="715" y1="510" x2="715" y2="575" stroke="#0f172a" stroke-width="1.6"/>
-  <polygon points="715,510 710,520 715,530 720,520" fill="#0f172a"/>
-  <text x="724" y="526" font-size="11" fill="#0f172a">1</text>
-  <text x="724" y="568" font-size="11" fill="#0f172a">1..*</text>
+  <!-- Categoria 1 o a  1..* Plato (Aggregation) -->
+  <line x1="642" y1="700" x2="642" y2="645" stroke="#0f172a" stroke-width="1.5"/>
+  <polygon points="642,700 637,690 642,680 647,690" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+  <text x="650" y="695" font-size="11" fill="#0f172a">1</text>
+  <text x="650" y="658" font-size="11" fill="#0f172a">1..*</text>
+
+  <!-- Plato  a  RecetaInsumo & RecetaInsumo -> Insumo -->
+  <path d="M 535 628 L 510 628 L 510 665 L 180 665 L 180 625" fill="none" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="115" y1="625" x2="115" y2="680" stroke="#16a34a" stroke-width="1.5"/>
+
+  <!-- Pedido 1 -> 1 ComandaCocina -->
+  <line x1="485" y1="416" x2="535" y2="416" stroke="#334155" stroke-width="1.5"/>
+  <text x="490" y="409" font-size="11" fill="#334155">1</text>
+  <text x="520" y="409" font-size="11" fill="#334155">1</text>
+
+  <!-- Pedido 1 -> 0..1 Factura (routed cleanly below ComandaCocina at y=502 with bridge at x=772) -->
+  <path d="M 485 450 L 512 450 L 512 502 L 765 502 A 7 7 0 0 1 779 502 L 798 502 L 798 475 L 815 475" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="492" y="444" font-size="11" fill="#7c3aed">1</text>
+  <text x="784" y="466" font-size="11" fill="#7c3aed">0..1</text>
+
+  <!-- Factura 1  a  1..* Pago (Composition) -->
+  <line x1="937" y1="490" x2="937" y2="550" stroke="#0f172a" stroke-width="1.6"/>
+  <polygon points="937,490 932,500 937,510 942,500" fill="#0f172a"/>
+  <text x="946" y="506" font-size="11" fill="#0f172a">1</text>
+  <text x="946" y="542" font-size="11" fill="#0f172a">1..*</text>
 
   <!-- Factura ..> EstrategiaPago -->
-  <line x1="850" y1="420" x2="945" y2="420" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5,4"/>
-  <text x="880" y="412" font-size="11" fill="#92400e">usa</text>
+  <line x1="1060" y1="400" x2="1130" y2="400" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5,4"/>
+  <text x="1082" y="392" font-size="11" fill="#92400e">usa</text>
 
-  <!-- Strategy Implementations -->
-  <path d="M 942 530 L 942 495 L 1092 495 L 1092 462" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="5,4"/>
-  <path d="M 1082 530 L 1082 495" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="5,4"/>
-  <path d="M 1227 530 L 1227 495 L 1092 495" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="5,4"/>
-  <polygon points="1092,462 1086,474 1098,474" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+  <!-- Strategy implementations -->
+  <path d="M 1131 515 L 1131 482 L 1297 482 L 1297 440" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="1263" y1="515" x2="1263" y2="482" stroke="#d97706" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <path d="M 1407 515 L 1407 482 L 1297 482" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <polygon points="1297,440 1291,452 1303,452" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+
+  <!-- FachadaPedidoCocina a Pedido, ComandaCocina, Plato, Insumo (100% open outer x=1515 & x=772 corridor) -->
+  <path d="M 1395 100 L 1515 100 L 1515 815 L 127 815 L 127 785" fill="none" stroke="#15803d" stroke-width="1.6" stroke-dasharray="5,4"/>
+  <path d="M 772 815 L 772 455 L 750 455" fill="none" stroke="#15803d" stroke-width="1.6" stroke-dasharray="5,4"/>
+  <path d="M 772 592 L 750 592" fill="none" stroke="#15803d" stroke-width="1.6" stroke-dasharray="5,4"/>
+  <path d="M 772 518 L 465 518 L 465 477" fill="none" stroke="#15803d" stroke-width="1.6" stroke-dasharray="5,4"/>
+  <text x="1405" y="92" font-size="11" font-weight="bold" fill="#166534">&lt;&lt;coordina&gt;&gt;</text>
 
   <!-- Legend -->
-  <rect x="20" y="730" width="1275" height="95" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
-  <text x="40" y="756" font-size="13" font-weight="bold" fill="#0f172a">Notas de diseño y cumplimiento (Rúbrica G2-P1 A2/A3):</text>
-  <text x="40" y="778" font-size="12" fill="#334155">• Herencia: Empleado (abstracta) → Mesero, Cocinero, Cajero.  • Composición (◆): Pedido *-- DetallePedido y Factura *-- Pago.</text>
-  <text x="40" y="798" font-size="12" fill="#334155">• Polimorfismo y Patrón Strategy: EstrategiaPago implementada por PagoEfectivo, PagoTarjeta y PagoTransferencia.  • Patrón Facade: FachadaPedidoCocina.</text>
-  <text x="40" y="816" font-size="12" fill="#334155">• Cohesión: Ninguna clase mezcla interfaz, lógica de negocio, persistencia SQL ni reportes (Regla 5 de §1.2).</text>
+  <rect x="30" y="835" width="1430" height="95" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="50" y="860" font-size="13" font-weight="bold" fill="#0f172a">Notas de diseño y cumplimiento (Rúbrica G2-P1 A2/A3):</text>
+  <text x="50" y="882" font-size="12" fill="#334155">• Herencia: Empleado (abstracta) → Administrador, Mesero, Cocinero, Cajero.  • Composición (◆): Pedido *-- DetallePedido, Factura *-- Pago, Plato *-- RecetaInsumo.</text>
+  <text x="50" y="902" font-size="12" fill="#334155">• Agregación (◇): Mesa o-- Pedido, Categoria o-- Plato.  • Patrón Strategy: EstrategiaPago (3 impl.).  • Patrón Facade: FachadaPedidoCocina coordina Pedido, ComandaCocina, Plato e Insumo.</text>
+  <text x="50" y="920" font-size="12" fill="#334155">• Cohesión: Ninguna clase mezcla interfaz, lógica de negocio, persistencia SQL ni reportes (Regla 5 de §1.2).</text>
 </svg>

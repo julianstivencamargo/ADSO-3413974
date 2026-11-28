@@ -46,17 +46,17 @@ Construí desde cero la justificación de plataforma tecnológica (TypeScript/Ne
 - [x] A2 Diagrama de clases: ≥ 8 clases, tipos, métodos, multiplicidades, ≥ 1 composición/agregación y ≥ 1 herencia o interfaz (con ≥ 2 implementaciones)
 - [x] A3 ≥ 2 patrones GoF distintos aplicados en el diagrama (al menos uno distinto de singleton)
 - [x] A4 Arquitectura con diagrama y tabla de ≥ 3 RNF → decisión
-- [ ] A5 Vista de componentes: ≥ 5 componentes con interfaces *(Entrega de cierre · 28/11/2026)*
-- [ ] A6 Vista de despliegue: ≥ 3 nodos con artefactos y protocolos *(Entrega de cierre · 28/11/2026)*
-- [ ] A7 Matriz de trazabilidad análisis → diseño *(Entrega de cierre · 28/11/2026)*
-- [x] Fuente editable e imagen exportada de los diagramas de avance (A2, A4)
+- [x] A5 Vista de componentes: ≥ 5 componentes con interfaces
+- [x] A6 Vista de despliegue: ≥ 3 nodos con artefactos y protocolos
+- [x] A7 Matriz de trazabilidad análisis → diseño
+- [x] Fuente editable e imagen exportada de cada diagrama
 
 ## 5. Historial de commits
 
 | Día | Qué avancé (mensaje del commit) |
 |---|---|
-| Jueves 26/11/2026 | `feat(G2-P1): ficha de plataforma, diagrama de clases, patrones y arquitectura SIGRES` |
-| Sábado 28/11/2026 (antes 6:00 a. m.) | `docs(G2-P1): vistas de componentes, despliegue, matriz de trazabilidad y cierre README` |
+| Jueves 26/11/2026 | [`09128d3`](https://github.com/julianstivencamargo/ADSO-3413974/commit/09128d3) · `feat(G2-P1): ficha de plataforma, diagrama de clases, patrones y arquitectura SIGRES` |
+| Viernes 27/11/2026 | `docs(G2-P1): vistas de componentes, despliegue, matriz de trazabilidad, ajustes UML y cierre README` |
 
 ## 6. Uso de inteligencia artificial (declaración obligatoria)
 

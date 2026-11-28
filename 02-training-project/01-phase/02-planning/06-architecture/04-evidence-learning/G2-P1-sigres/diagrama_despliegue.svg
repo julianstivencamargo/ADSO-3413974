@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1200" height="420" fill="#f8fafc"/>
+  <text x="600" y="34" font-size="19" font-weight="bold" text-anchor="middle" fill="#0f172a">SIGRES · Vista de Despliegue e Infraestructura (A6)</text>
+
+  <!-- Node 1: Cliente (x=30..242) -->
+  <g transform="translate(30,90)">
+    <polygon points="0,12 12,0 212,0 200,12" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+    <polygon points="200,12 212,0 212,210 200,222" fill="#94a3b8" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="12" width="200" height="210" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+    <text x="100" y="38" font-size="11" text-anchor="middle" fill="#475569">&lt;&lt;device&gt;&gt;</text>
+    <text x="100" y="58" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">Nodo Cliente</text>
+    <rect x="18" y="78" width="164" height="46" rx="4" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="100" y="100" font-size="11" font-weight="bold" text-anchor="middle" fill="#1e3a8a">SPA Web Mesero / Caja</text>
+    <text x="100" y="116" font-size="10" text-anchor="middle" fill="#1e40af">Navegador / Tableta</text>
+    <rect x="18" y="138" width="164" height="46" rx="4" fill="#fef3c7" stroke="#d97706"/>
+    <text x="100" y="160" font-size="11" font-weight="bold" text-anchor="middle" fill="#78350f">Pantalla KDS &amp; Menú QR</text>
+    <text x="100" y="176" font-size="10" text-anchor="middle" fill="#92400e">WebSocket Client</text>
+  </g>
+
+  <!-- Node 2: Proxy Nginx (x=335..547) -->
+  <g transform="translate(335,90)">
+    <polygon points="0,12 12,0 212,0 200,12" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+    <polygon points="200,12 212,0 212,210 200,222" fill="#94a3b8" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="12" width="200" height="210" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+    <text x="100" y="38" font-size="11" text-anchor="middle" fill="#475569">&lt;&lt;execution environment&gt;&gt;</text>
+    <text x="100" y="58" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">Nodo Proxy Nginx</text>
+    <rect x="18" y="85" width="164" height="54" rx="4" fill="#e0f2fe" stroke="#0284c7"/>
+    <text x="100" y="108" font-size="11" font-weight="bold" text-anchor="middle" fill="#0369a1">Terminación TLS 1.3</text>
+    <text x="100" y="125" font-size="10" text-anchor="middle" fill="#0369a1">Certificados + Rate Limit</text>
+    <rect x="18" y="152" width="164" height="40" rx="4" fill="#f1f5f9" stroke="#64748b"/>
+    <text x="100" y="176" font-size="11" text-anchor="middle" fill="#334155">Archivos Estáticos SPA</text>
+  </g>
+
+  <!-- Node 3: App Server (x=640..852) -->
+  <g transform="translate(640,90)">
+    <polygon points="0,12 12,0 212,0 200,12" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+    <polygon points="200,12 212,0 212,210 200,222" fill="#94a3b8" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="12" width="200" height="210" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+    <text x="100" y="38" font-size="11" text-anchor="middle" fill="#475569">&lt;&lt;container&gt;&gt;</text>
+    <text x="100" y="58" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">Nodo Aplicación</text>
+    <rect x="18" y="80" width="164" height="58" rx="4" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="100" y="102" font-size="11" font-weight="bold" text-anchor="middle" fill="#14532d">API NestJS (TypeScript)</text>
+    <text x="100" y="120" font-size="10" text-anchor="middle" fill="#166534">JWT/RBAC + Fachada + Strategy</text>
+    <rect x="18" y="152" width="164" height="44" rx="4" fill="#fef3c7" stroke="#d97706"/>
+    <text x="100" y="174" font-size="11" font-weight="bold" text-anchor="middle" fill="#78350f">Gateway WebSockets</text>
+    <text x="100" y="189" font-size="10" text-anchor="middle" fill="#92400e">Despacho KDS &amp; Caché Menú</text>
+  </g>
+
+  <!-- Node 4: DB (x=945..1157) -->
+  <g transform="translate(945,90)">
+    <polygon points="0,12 12,0 212,0 200,12" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+    <polygon points="200,12 212,0 212,210 200,222" fill="#94a3b8" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="12" width="200" height="210" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+    <text x="100" y="38" font-size="11" text-anchor="middle" fill="#475569">&lt;&lt;container · red privada&gt;&gt;</text>
+    <text x="100" y="58" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">Nodo Datos</text>
+    <rect x="18" y="85" width="164" height="58" rx="4" fill="#fef2f2" stroke="#dc2626"/>
+    <text x="100" y="108" font-size="11" font-weight="bold" text-anchor="middle" fill="#7f1d1d">PostgreSQL (sigres_db)</text>
+    <text x="100" y="125" font-size="10" text-anchor="middle" fill="#991b1b">13 Tablas 3FN + ACID</text>
+    <rect x="18" y="154" width="164" height="40" rx="4" fill="#f1f5f9" stroke="#64748b"/>
+    <text x="100" y="178" font-size="11" text-anchor="middle" fill="#334155">Volumen Respaldos Diarios</text>
+  </g>
+
+  <!-- Connections (93px open gap each!) -->
+  <line x1="242" y1="205" x2="335" y2="205" stroke="#0f172a" stroke-width="2"/>
+  <text x="288" y="182" font-size="11" font-weight="bold" text-anchor="middle" fill="#0369a1">HTTPS/WSS</text>
+  <text x="288" y="196" font-size="11" text-anchor="middle" fill="#0369a1">443</text>
+
+  <line x1="547" y1="205" x2="640" y2="205" stroke="#0f172a" stroke-width="2"/>
+  <text x="593" y="182" font-size="11" font-weight="bold" text-anchor="middle" fill="#14532d">HTTP/WS</text>
+  <text x="593" y="196" font-size="11" text-anchor="middle" fill="#14532d">3000</text>
+
+  <line x1="852" y1="205" x2="945" y2="205" stroke="#dc2626" stroke-width="2"/>
+  <text x="898" y="182" font-size="11" font-weight="bold" text-anchor="middle" fill="#991b1b">TCP</text>
+  <text x="898" y="196" font-size="11" text-anchor="middle" fill="#991b1b">5432</text>
+
+  <text x="600" y="365" font-size="12" text-anchor="middle" fill="#334155">Seguridad de red: solo el puerto 443 está expuesto en Nginx; los puertos 3000 y 5432 operan en red privada interna.</text>
+</svg>

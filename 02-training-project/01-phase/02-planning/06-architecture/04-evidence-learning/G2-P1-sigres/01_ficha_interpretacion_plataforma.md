@@ -7,7 +7,7 @@
 
 ## 1. Requisitos funcionales y no funcionales seleccionados
 
-### 1.1 Requisitos funcionales (12 seleccionados de los 17 RF del SRS)
+### 1.1 Requisitos funcionales (14 seleccionados de los 17 RF del SRS)
 
 | ID | Nombre en el SRS | Prioridad | Módulo / Flujo |
 |---|---|---|---|
