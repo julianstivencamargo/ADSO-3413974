@@ -8,7 +8,7 @@
 | Tabla | Columna | Tipo | Tamaño | Restricciones | Dominio / Regla de negocio |
 |---|---|---|---|---|---|
 | `rol` | `id_rol` | INTEGER | n/a | PK | Entero positivo identificador del rol |
-| `rol` | `nombre` | VARCHAR | 40 | NOT NULL, UNIQUE, CHECK | `'Administrador'`, `'Mesero'`, `'Cocinero'`, `'Cajero'` |
+| `rol` | `nombre` | VARCHAR | 40 | NOT NULL, UNIQUE, CHECK | `'Administrador'`, `'Mesero'`, `'Cocinero'`, `'Cajero'`, `'Gerente'` |
 | `rol` | `descripcion` | VARCHAR | 150 | NOT NULL | Descripción de permisos del rol |
 | `usuario` | `id_usuario` | INTEGER | n/a | PK | Entero positivo identificador del empleado |
 | `usuario` | `id_rol` | INTEGER | n/a | FK → `rol.id_rol`, NOT NULL, ON DELETE RESTRICT | Rol operativo asignado |

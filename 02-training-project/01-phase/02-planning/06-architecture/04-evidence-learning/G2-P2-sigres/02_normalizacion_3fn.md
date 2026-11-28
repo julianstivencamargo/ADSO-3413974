@@ -25,7 +25,7 @@
 ## 2. Tabla 2: `factura_pago_sin_norm` (Dependencia transitiva: 0FN → 1FN → 2FN → 3FN)
 
 ### Estado inicial (0FN)
-`factura_pago_sin_norm(id_factura, numero_factura, fecha_emision, id_pedido, id_mesa, id_cajero, nombre_cajero, id_rol_cajero, nombre_rol_cajero, subtotal, impuesto, propina, total, metodos_y_montos_pago)`  
+`factura_pago_sin_norm(id_factura, numero_factura, fecha_emision, id_pedido, id_mesa, id_cajero, nombre_cajero, id_rol_cajero, nombre_rol_cajero, subtotal, impuesto, propina, descuento, total, metodos_y_montos_pago)`  
 * **Llave primaria:** `id_factura`  
 * **Anomalía inicial:** `metodos_y_montos_pago` agrupa múltiples pagos en una sola cadena cuando el cliente realiza pago mixto (`"Efectivo: 30000; Tarjeta: 25000"`).
 

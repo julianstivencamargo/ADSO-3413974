@@ -22,6 +22,10 @@ Reutiliza las 13 entidades conceptuales de SIGRES definidas en [G1-P2 MER](../..
 | 8 | `COMANDA_COCINA` | `id_comanda` | `estado_cocina`, `hora_envio`, `hora_inicio`, `hora_listo` | `RF05`, `RF07`, `RNF-17` |
 | 9 | `FACTURA` | `id_factura` | `numero_factura`, `fecha_emision`, `subtotal`, `impuesto`, `propina`, `descuento`, `total` | `RF12`, `RF15` |
 | 10 | `PAGO` | `id_pago` | `metodo`, `monto`, `referencia`, `fecha_pago` | `RF13`, `RNF-19` |
+| 11 | `DETALLE_PEDIDO` (asociativa) | `id_detalle_pedido` | `cantidad`, `precio_unitario`, `observaciones` | `RF04`, `RF12` |
+| 12 | `RECETA_INSUMO` (asociativa) | `(id_plato, id_insumo)` | `cantidad_porcion` | `RF10`, `RF11` |
+
+> **Nota de transición análisis (G1) → diseño (G2):** El MER conceptual de G1 incluía 13 entidades (`MOVIMIENTO_INVENTARIO` y `HISTORIAL_ESTADO_PEDIDO`). Para el esquema lógico del MVP en G2-P2 se consolidó el descuento directo sobre `insumo` vía `receta_insumo` y la trazabilidad de tiempos en `comanda_cocina` (`hora_envio`, `hora_inicio`, `hora_listo`), extrayendo además `telefono_usuario` (1FN), resultando exactamente en **13 tablas**.
 
 * **Relaciones 1:N principales:** `ROL` *(1,1) — asigna — (0,N)* `USUARIO`; `MESA` *(1,1) — aloja — (0,N)* `PEDIDO`; `CATEGORIA` *(1,1) — agrupa — (0,N)* `PLATO`; `FACTURA` *(1,1) — recibe — (1,N)* `PAGO`.
 * **Relaciones N:M principales:** `PEDIDO` *(1,N) — incluye — (0,N)* `PLATO` (resuelta con `detalle_pedido`); `PLATO` *(1,N) — consume — (0,N)* `INSUMO` (resuelta con `receta_insumo`).
@@ -32,10 +36,10 @@ Reutiliza las 13 entidades conceptuales de SIGRES definidas en [G1-P2 MER](../..
 
 | Regla de transformación | Caso concreto en SIGRES | Resultado en el modelo lógico relacional |
 |---|---|---|
-| **Relación N:M $\to$ tabla intermedia** | Un `PEDIDO` incluye varios `PLATO` y un `PLATO` aparece en muchos pedidos. | Tabla `detalle_pedido(id_detalle_pedido PK, id_pedido FK, id_plato FK, cantidad, precio_unitario, observaciones)` con unicidad `(id_pedido, id_plato)`. |
+| **Relación N:M $\to$ tabla intermedia** | Un `PEDIDO` incluye varios `PLATO` y un `PLATO` aparece en muchos pedidos. | Tabla `detalle_pedido(id_detalle_pedido PK, id_pedido FK, id_plato FK, cantidad, precio_unitario, observaciones)` (admite múltiples líneas del mismo plato con distintas observaciones). |
 | **Relación N:M $\to$ tabla intermedia** | Un `PLATO` requiere varios `INSUMO` y un `INSUMO` se usa en varios platos. | Tabla `receta_insumo(id_plato FK, id_insumo FK, cantidad_porcion)` con PK compuesta `(id_plato, id_insumo)`. |
 | **Relación 1:N $\to$ FK en lado «muchos»** | Una `MESA` aloja muchos `PEDIDO`; una `FACTURA` recibe varios `PAGO`. | `pedido.id_mesa FK`, `pedido.id_mesero FK`, `pago.id_factura FK`. |
-| **Relación 1:1 $\to$ FK única (`UNIQUE`)** | Cada `PEDIDO` genera como máximo una `COMANDA_COCINA` y una `FACTURA`. | `comanda_cocina.id_pedido FK UNIQUE` y `factura.id_pedido FK UNIQUE`. |
+| **Relación 1:1 $\to$ FK única (`UNIQUE`)** | Cada `PEDIDO` genera como máximo una `COMANDA_COCINA` y una `FACTURA` *(nota de diseño: en G2 se consolida 1 pedido activo por mesa con 1 factura `1:1`, resolviendo cuentas divididas mediante `factura 1:N pago`)*. | `comanda_cocina.id_pedido FK UNIQUE` y `factura.id_pedido FK UNIQUE`. |
 | **Atributo multivaluado $\to$ tabla aparte** | Un `USUARIO` puede registrar uno o varios teléfonos de contacto. | Tabla `telefono_usuario(id_telefono PK, id_usuario FK, numero, tipo)`. |
 | **Generalización (`Empleado`)** | `Mesero`, `Cocinero`, `Cajero` y `Administrador` comparten autenticación y difieren en permisos. | Tabla única `usuario` vinculada a `rol(id_rol FK)` (evita duplicar credenciales y simplifica autenticación `RF02`). |
 

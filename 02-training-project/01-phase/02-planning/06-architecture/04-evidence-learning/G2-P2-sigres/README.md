@@ -46,16 +46,16 @@ Elaboré desde cero la normalización paso a paso 0FN → 3FN con dependencias f
 - [x] B2 Modelo lógico: ≥ 8 tablas con PK/FK y cuadro de reglas de transformación
 - [x] B3 Normalización: ≥ 2 tablas de 0FN a 3FN con dependencias funcionales (una con llave compuesta y una con dependencia transitiva)
 - [x] B4 Diccionario de datos completo
-- [ ] B5 Script SQL ejecutado sin errores (evidencia adjunta) y `ON DELETE` en ≥ 3 FK *(Entrega de cierre · 28/11/2026)*
-- [ ] B6 ≥ 6 políticas de seguridad (con hash y sal en contraseñas y TLS) y matriz de ≥ 3 roles *(Entrega de cierre · 28/11/2026)*
-- [ ] B7 Lista de chequeo de ≥ 20 criterios, diligenciada sobre P1 y P2, con evidencia *(Entrega de cierre · 28/11/2026)*
+- [x] B5 Script SQL ejecutado sin errores (evidencia adjunta) y `ON DELETE` en ≥ 3 FK
+- [x] B6 ≥ 6 políticas de seguridad (con hash y sal en contraseñas y TLS) y matriz de ≥ 3 roles
+- [x] B7 Lista de chequeo de ≥ 20 criterios, diligenciada sobre P1 y P2, con evidencia
 
 ## 5. Historial de commits
 
 | Día | Qué avancé (mensaje del commit) |
 |---|---|
-| Jueves 26/11/2026 | `feat(G2-P2): modelo conceptual, logico relacional, normalizacion 3FN y diccionario SIGRES` |
-| Sábado 28/11/2026 (antes 6:00 a. m.) | `docs(G2-P2): script SQL verificado, politicas de seguridad, lista de chequeo y README` |
+| Jueves 26/11/2026 | [`2c9f91b`](https://github.com/julianstivencamargo/ADSO-3413974/commit/2c9f91b) · `feat(G2-P2): modelo conceptual, logico relacional, normalizacion 3FN y diccionario SIGRES` |
+| Viernes 27/11/2026 | `docs(G2-P2): script SQL verificado, politicas de seguridad, lista de chequeo, ajustes Pata de Gallo y cierre README` |
 
 ## 6. Uso de inteligencia artificial (declaración obligatoria)
 
