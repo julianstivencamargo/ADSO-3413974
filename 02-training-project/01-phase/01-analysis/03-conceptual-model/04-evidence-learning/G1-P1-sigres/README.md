@@ -27,10 +27,10 @@ Criterios y mínimos: [Rubricas_G1.md](../../03-support-material/Rubricas_G1.md)
 
 | # | Artefacto | Qué cambié y por qué | Enlace al commit |
 |---|---|---|---|
-| 1 | Diagrama integral de casos de uso (`diagrama_casos_uso.drawio` / `.svg` y `02_casos_de_uso.md`) | Unifiqué los 8 diagramas modulares separados del SRS (figuras 1 a 8) en una sola frontera de sistema, eliminando casos duplicados (*Ver disponibilidad de mesas*, *Consultar estado del pedido*), incorporando la generalización abstracta `Empleado` y justificando 3 `«include»` y 3 `«extend»` con punto de extensión (criterio C4; hallazgo H5). | Commit 1 · 25/11/2026 *(se enlazará el hash definitivo en el Commit 2 del 27/11/2026)* |
-| 2 | Catálogo de roles y casos de uso (`02_casos_de_uso.md`) | Agregué el actor y rol operativo `Cocina` en el catálogo y reglas de acceso (estaba omitido en RF01, RF03 y Alcance del SRS, aunque existía en RNF-01/02 y en la Figura 2), y agrupé las operaciones CRUD de usuarios/roles, menú/categorías y mesas conforme a la regla de arbitraje §7.1 (criterio C4; hallazgo H1). | Commit 1 · 25/11/2026 *(se enlazará el hash definitivo en el Commit 2 del 27/11/2026)* |
-| 3 | Matriz requisito → caso de uso (`03_matriz_requisito_caso_uso.md`) | Corregí 8 referencias cruzadas desplazadas entre fichas del SRS (RF05, RF07, RF10, RF11, RF14, RF15, RF16 y RF17), unifiqué el manejo de pago mixto/división de cuenta y tracé los 17 RF al 100 % distinguiendo los 31 RNF e IU/IH/IS/IC como restricciones (criterio C3; hallazgos H2, H3, H4, H7, H8). | Commit 1 · 25/11/2026 *(se enlazará el hash definitivo en el Commit 2 del 27/11/2026)* |
-| 4 | Caracterización, selección metodológica y plan (`01_caracterizacion_metodologia_plan.md`) | Construí la caracterización en 4 aspectos tomada del SRS, comparé RUP, Scrum, XP y RAD con 4 criterios propios del proyecto, justifiqué **Scrum** como metodología única (no híbrida) y organicé el cronograma de 8 actividades con enfoque en el flujo crítico mesa → cocina → caja (criterios C1 y C2). | Commit 1 · 25/11/2026 *(se enlazará el hash definitivo en el Commit 2 del 27/11/2026)* |
+| 1 | Diagrama integral de casos de uso (`diagrama_casos_uso.drawio` / `.svg` y `02_casos_de_uso.md`) | Unifiqué los 8 diagramas modulares separados del SRS (figuras 1 a 8) en una sola frontera de sistema, eliminando casos duplicados (*Ver disponibilidad de mesas*, *Consultar estado del pedido*), incorporando la generalización abstracta `Empleado`, ajustando geometría sin cruces y justificando 3 `«include»` y 3 `«extend»` (criterio C4; hallazgo H5). | [`641f7df`](https://github.com/julianstivencamargo/ADSO-3413974/commit/641f7df) (25/11) + Commit 2 (27/11) |
+| 2 | Catálogo de roles y casos de uso (`02_casos_de_uso.md`) | Agregué el actor y rol operativo `Cocina` en el catálogo y reglas de acceso (estaba omitido en RF01, RF03 y Alcance del SRS, aunque existía en RNF-01/02 y en la Figura 2), y agrupé las operaciones CRUD de usuarios/roles, menú/categorías y mesas conforme a la regla de arbitraje §7.1 (criterio C4; hallazgo H1). | [`641f7df`](https://github.com/julianstivencamargo/ADSO-3413974/commit/641f7df) (25/11) |
+| 3 | Matriz requisito → caso de uso (`03_matriz_requisito_caso_uso.md`) | Corregí 8 referencias cruzadas desplazadas entre fichas del SRS (RF05, RF07, RF10, RF11, RF14, RF15, RF16 y RF17), unifiqué el manejo de pago mixto/división de cuenta y tracé los 17 RF al 100 % distinguiendo los 31 RNF e IU/IH/IS/IC como restricciones (criterio C3; hallazgos H2, H3, H4, H7, H8). | Commit 2 · 27/11/2026 |
+| 4 | Caracterización, selección metodológica y plan (`01_caracterizacion_metodologia_plan.md`) | Construí la caracterización en 4 aspectos tomada del SRS, comparé RUP, Scrum, XP y RAD con 4 criterios propios del proyecto, justifiqué **Scrum** como metodología única (no híbrida) y organicé el cronograma de 8 actividades con enfoque en el flujo crítico mesa → cocina → caja (criterios C1 y C2). | [`641f7df`](https://github.com/julianstivencamargo/ADSO-3413974/commit/641f7df) (25/11) |
 
 ## 4. Qué construí nuevo
 
@@ -48,7 +48,7 @@ Criterios y mínimos: [Rubricas_G1.md](../../03-support-material/Rubricas_G1.md)
 - [x] Diagrama de casos de uso (fuente editable): [diagrama_casos_uso.drawio](./diagrama_casos_uso.drawio)
 - [x] Diagrama de casos de uso (imagen): [diagrama_casos_uso.svg](./diagrama_casos_uso.svg)
 - [x] Catálogo y justificación de casos de uso y relaciones: [02_casos_de_uso.md](./02_casos_de_uso.md)
-- [ ] Matriz requisito → caso de uso: [03_matriz_requisito_caso_uso.md](./03_matriz_requisito_caso_uso.md) *(Entrega de cierre y cobertura final · 27/11/2026)*
+- [x] Matriz requisito → caso de uso: [03_matriz_requisito_caso_uso.md](./03_matriz_requisito_caso_uso.md)
 
 ## 6. Declaración de autoría
 
@@ -56,7 +56,7 @@ Criterios y mínimos: [Rubricas_G1.md](../../03-support-material/Rubricas_G1.md)
 - [x] Declaro que lo que tomé de mi equipo o de otra fuente está identificado en la sección 2.
 - [x] Entiendo que el sábado 28 de noviembre de 2026 el instructor me hará **3 preguntas orales** sobre mis productos (una del producto 1, una del producto 2 y una tercera a su elección) y que, si respondo bien menos de 2, el producto sobre el que fallé queda con tope de 50.
 
-Firma (usuario de GitHub y fecha): `julianstivencamargo` · 2026-11-25
+Firma (usuario de GitHub y fecha): `julianstivencamargo` · 2026-11-27
 
 ## 7. Uso de inteligencia artificial
 
@@ -66,6 +66,6 @@ Firma (usuario de GitHub y fecha): `julianstivencamargo` · 2026-11-25
 
 ## 8. Autocontrol antes del push
 
-- [ ] Hice commits propios en al menos 2 días distintos entre la publicación de la guía (sábado 21 de noviembre de 2026) y la entrega *(Commit 1 hecho el 25/11/2026; pendiente Commit 2 el viernes 27/11/2026)*.
+- [x] Hice commits propios en al menos 2 días distintos entre la publicación de la guía (sábado 21 de noviembre de 2026) y la entrega (`25/11/2026` y `27/11/2026`).
 - [x] No subí el marco documental del instructor, plantillas sin diligenciar ni archivos de otras personas.
-- [ ] Hice `push` y comprobé en GitHub que la carpeta está publicada *(se completará tras el push final antes del sábado 28 a las 6:00 a. m.)*.
+- [x] Hice `push` y comprobé en GitHub que la carpeta está publicada.
